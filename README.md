@@ -4,32 +4,38 @@ Run your own privacy-first ad blocking service in the cloud for free on Google C
 
 # work in progress - check back often
 
-<img src="./images/logos/pihole.svg" height="75" align="left">
+<img src="./images/logos/googlecloud.svg" height="70" align="left">
 
-# Pi-Hole Steps
-
-lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
-
-<img src="./images/logos/openvpn.svg" height="75" align="left">
-
-# OpenVPN Steps
+# Google Cloud Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/pivpn.png" height="75" align="left">
+<img src="./images/logos/computeengine.svg" height="70" align="left">
 
-# PiVPN Steps
+# Compute Engine Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/debian.svg" height="75" align="left">
+<img src="./images/logos/debian.svg" height="70" align="left">
 
 # Debian Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/computeengine.svg" height="75" align="left">
+<img src="./images/logos/pihole.svg" height="70" align="left">
 
-# Compute Engine Steps
+# Pi-Hole Steps
+
+lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
+
+<img src="./images/logos/pivpn.png" height="70" align="left">
+
+# PiVPN Steps
+
+lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
+
+<img src="./images/logos/openvpn.svg" height="70" align="left">
+
+# OpenVPN Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
