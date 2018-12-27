@@ -8,18 +8,28 @@ Run your own privacy-first ad blocking service in the cloud for free on Google C
 
 # Pi-Hole Steps
 
+lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
+
 <img src="./images/logos/openvpn.svg" height="75" align="left">
 
 # OpenVPN Steps
+
+lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
 <img src="./images/logos/pivpn.png" height="75" align="left">
 
 # PiVPN Steps
 
+lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
+
 <img src="./images/logos/debian.svg" height="75" align="left">
 
 # Debian Steps
 
+lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
+
 <img src="./images/logos/computeengine.svg" height="75" align="left">
 
 # Compute Engine Steps
+
+lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
