@@ -4,7 +4,7 @@ Run your own privacy-first ad blocking service in the cloud for free on Google C
 
 # work in progress - check back often
 
-<img src="./images/logos/googlecloud.svg" height="70" align="left">
+<img src="./images/logos/cloud.svg" height="70" align="left">
 
 # Google Cloud Steps
 
