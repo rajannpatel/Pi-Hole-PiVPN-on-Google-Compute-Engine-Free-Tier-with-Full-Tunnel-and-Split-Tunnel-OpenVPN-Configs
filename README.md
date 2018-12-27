@@ -4,37 +4,37 @@ Run your own privacy-first ad blocking service in the cloud for free on Google C
 
 # work in progress - check back often
 
-<img src="./images/logos/cloud.svg" height="70" align="left">
+<img src="./images/logos/cloud.svg" width="48" align="left">
 
 # Google Cloud Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/computeengine.svg" height="70" align="left">
+<img src="./images/logos/computeengine.svg" width="48" align="left">
 
 # Compute Engine Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/debian.svg" height="70" align="left">
+<img src="./images/logos/debian.svg" width="48" align="left">
 
 # Debian Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/pihole.svg" height="70" align="left">
+<img src="./images/logos/pihole.svg" width="48" align="left">
 
 # Pi-Hole Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/pivpn.png" height="70" align="left">
+<img src="./images/logos/pivpn.png" width="48" align="left">
 
 # PiVPN Steps
 
 lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
 
-<img src="./images/logos/openvpn.svg" height="70" align="left">
+<img src="./images/logos/openvpn.svg" width="48" align="left">
 
 # OpenVPN Steps
 
