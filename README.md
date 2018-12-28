@@ -8,8 +8,6 @@ The goal of this guide is to enable you to safely and privately use the Internet
 
 Run your own privacy-first ad blocking service within the Free Usage Tier on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android Phone.
 
-You can choose to encrypt all your network traffic (uses 10% more data, but more secure), or just the DNS portion (the bare minimum for ad blocking and bypassing basic content filters).
-
 | Tunnel Type | Data Usage | Security | Ad Blocking |
 | -- | -- | -- | -- |
 | full | 10% more data usage | 100% encryption | yes
