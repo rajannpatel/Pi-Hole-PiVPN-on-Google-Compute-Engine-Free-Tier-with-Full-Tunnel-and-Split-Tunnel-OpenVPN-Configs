@@ -6,12 +6,13 @@ Run your own privacy-first ad blocking service in the cloud for free on Google C
 
 <img src="./images/logos/cloud.svg" width="48" align="left">
 
-# Google Cloud Steps
+# Google Cloud Login and Account Creation
 
 Go to https://cloud.google.com and click **Console** at the top right if you have previously used Google's Cloud Services, or click **Try Free** if it's your first time.
 
  - Step 1: Agree to the terms and continue.
  - Step 2: set up a payments profile and continue.
+ - Click the Hamburger Menu at the top left: ![](./images/screenshots/1.png)
 
 <img src="./images/logos/computeengine.svg" width="48" align="left">
 
