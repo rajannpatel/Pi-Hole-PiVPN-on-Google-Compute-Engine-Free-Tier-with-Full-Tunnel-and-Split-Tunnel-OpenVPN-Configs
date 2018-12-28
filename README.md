@@ -1,3 +1,5 @@
+# work in progress - check back often
+
 # Pi-Hole and PiVPN on Google Compute Engine Free Tier with Full Tunnel and Split Tunnel OpenVPN Configurations
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
@@ -13,7 +15,7 @@ Run your own privacy-first ad blocking service within the Free Usage Tier on Goo
 | full | 10% more data usage | 100% encryption | yes
 | split | least data usage | DNS encryption only | yes
 
-# work in progress - check back often
+---
 
 <img src="./images/logos/cloud.svg" width="48" align="left">
 
