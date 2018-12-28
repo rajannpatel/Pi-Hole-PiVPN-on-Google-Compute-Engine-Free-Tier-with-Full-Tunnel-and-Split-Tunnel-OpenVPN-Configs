@@ -8,7 +8,7 @@ The goal of this guide is to enable you to safely and privately use the Internet
 
 <img src="./images/upfront-cost.svg" width="90" align="right">
 
-Run your own privacy-first ad blocking service within the Free Usage Tier on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android Phone.
+Run your own privacy-first ad blocking service within the [Free Usage Tier](https://cloud.google.com/free/) on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android Phone.
 
 | Tunnel Type | Data Usage | Security | Ad Blocking |
 | -- | -- | -- | -- |
@@ -31,13 +31,22 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
  - Click **Compute Engine**: <br><img src="./images/screenshots/2.png" width="138">
  - Select **VM instances**: <br><img src="./images/screenshots/3.png" width="102">
  - Create a Project if you don't already have one: <br><img src="./images/screenshots/4.png" width="294">
- - 
+- Enable billing for this Project if you haven't already: <br><img src="./images/screenshots/6.png" width="288">
+- Compute Engine will begin initializing: <br><img src="./images/screenshots/7.png" width="232">
 
 <img src="./images/logos/computeengine.svg" width="48" align="left">
 
 # Compute Engine Steps
 
-lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
+- Create a Virtual Machine instance on Compute Engine: <br><img src="./images/screenshots/8.png" width="216">
+- Customize the instance: <br><img src="./images/screenshots/8.png" width="216">
+- Use Static IPs: <br><img src="./images/screenshots/9.png" width="232">
+- <br><img src="./images/screenshots/10.png" width="238">
+- <br><img src="./images/screenshots/11.png" width="222">
+- <br><img src="./images/screenshots/12.png" width="260">
+- <br><img src="./images/screenshots/13.png" width="230">
+- <br><img src="./images/screenshots/14.png" width="395">
+- <br><img src="./images/screenshots/15.png" width="369">
 
 <img src="./images/logos/debian.svg" width="48" align="left">
 
@@ -56,13 +65,13 @@ apt-get update && apt-get upgrade -y
 curl -sSL https://install.pi-hole.net | bash
 ```
 
-You will flow into a series of prompts in a blue screen. All of the default values are appropriate.
+You will flow into a series of prompts in a blue screen.
 
-Choose OK or answer positively for all the prompts until the network questions appear:
-
- - ipv6 needs to be deselected
+- Choose OK or answer positively for all the prompts until the "Select Protocols" question appears. IPv6 needs to be deselected as shown below: <br><img src="./images/screenshots/16.png" width="281">
 
 Choose OK or answer positively for all the other prompts.
+
+- Go to the Web Interface, log in, and <br><img src="./images/screenshots/18.png" width="237">
 
 <img src="./images/logos/pivpn.png" width="48" align="left">
 
@@ -178,3 +187,34 @@ shutdown -r now
 
 # OpenVPN for Android
 
+<a href="https://f-droid.org/repository/browse/?fdid=de.blinkt.openvpn" target="_blank">
+<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
+<a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn" target="_blank">
+<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
+
+When the app opens you are in the **Profiles** Tab. Import your Profile, click the `+` at the top right. Then click **Import** at the bottom left of the modal that appears. Click the Hamburger Menu at the top left to choose **Google Drive**, or your **Downloads** folder, depending on what method you used to get the **.ovpn** file to your phone.
+
+Click the pencil icon next to the VPN profile you imported. Click the **Routing** Tab.
+
+Click **Excluded Networks** under IPv4 and add this:
+
+```
+10.0.0.8/8 172.16.0.0/12 192.168.0.0/16
+```
+
+**Bypass VPN for local networks** should NOT have a checkmark. Uncheck it.
+
+Under the **Authentication/Encryption** Tab
+
+The **Encryption Cipher** should be `AES-128-GCM`
+
+Under the **Allowed Apps** Tab the **Duo** app and **Google Play Store** and all 3 Phone apps, **Phone**, **Phone Messages** and **Phone Services** apps should be checked.
+
+Click the back button a couple times until you are at the Profiles tab again.
+
+Clicking the name of the VPN profile you imported should trigger a connection.
+
+Click the **Settings** Tab:
+- **OpenVPN 3 Core** should have a checkmark
+- click **Default VPN** and choose the VPN you have imported
+- **Connect on Boot** should have a checkmark
