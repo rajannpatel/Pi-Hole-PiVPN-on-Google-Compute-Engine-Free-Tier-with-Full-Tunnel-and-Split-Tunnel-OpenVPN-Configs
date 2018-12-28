@@ -15,7 +15,8 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
  - Step 2: set up a payments profile and continue.
  ### Compute Engine Creation
  - Click the Hamburger Menu at the top left: <br><img src="./images/screenshots/1.png" width="294">
- - Click Compute Engine: <br><img src="./images/screenshots/2.png" width="279">
+ - Click **Compute Engine**: <br><img src="./images/screenshots/2.png" width="279">
+ - Select **VM instances**: <br><img src="./images/screenshots/2.png" width="279">
 
 <img src="./images/logos/computeengine.svg" width="48" align="left">
 
