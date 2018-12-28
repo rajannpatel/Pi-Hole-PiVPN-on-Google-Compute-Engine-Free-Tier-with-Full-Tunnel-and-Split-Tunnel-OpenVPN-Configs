@@ -12,7 +12,7 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 
  - Step 1: Agree to the terms and continue.
  - Step 2: set up a payments profile and continue.
- - Click the Hamburger Menu at the top left: ![](./images/screenshots/1.png)
+ - Click the Hamburger Menu at the top left: <img src="./images/logos/cloud.svg" width="294">
 
 <img src="./images/logos/computeengine.svg" width="48" align="left">
 
