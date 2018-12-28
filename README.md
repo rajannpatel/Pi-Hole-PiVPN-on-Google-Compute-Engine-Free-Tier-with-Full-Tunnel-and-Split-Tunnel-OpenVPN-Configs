@@ -1,16 +1,16 @@
-# Pi-Hole and PiVPN on Google Compute Engine Free Tier with Full Tunnel and Split Tunnel OpenVPN Configurations
+<img src="./images/global-dns-network.png" width="181" align="right">
 
-<img src="./images/global-dns-network.png" width="90" align="right">
+# Pi-Hole and PiVPN on Google Compute Engine Free Tier with Full Tunnel and Split Tunnel OpenVPN Configurations
 
 The goal of this guide is to enable you to safely and privately use the Internet on your phone without intrusive advertisements, and blocking your ISP, mobile carrier, or public Wi-Fi hotspot provider from gaining insight into your usage activity.
 
-<img src="./images/upfront-cost.svg" width="45" align="right">
+<img src="./images/upfront-cost.svg" width="90" align="right">
 
 Run your own privacy-first ad blocking service within the Free Usage Tier on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android Phone.
 
 You can choose to encrypt all your network traffic (uses 10% more data, but more secure), or just the DNS portion (the bare minimum for ad blocking and bypassing basic content filters).
 
-<img src="./images/data-privacy-risk.svg" width="90" align="right">
+<img src="./images/data-privacy-risk.svg" width="125" align="right">
 
 | Tunnel Type | Data Usage | Security | Ad Blocking |
 | -- | -- | -- | -- |
