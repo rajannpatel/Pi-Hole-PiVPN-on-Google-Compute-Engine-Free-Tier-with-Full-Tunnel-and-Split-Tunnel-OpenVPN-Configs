@@ -1,8 +1,15 @@
 # Pi-Hole and PiVPN on Google Compute Engine Free Tier with Full Tunnel and Split Tunnel OpenVPN Configurations
 
-Run your own privacy-first ad blocking service in the cloud for free on Google Cloud's Compute Engine. This guide gets you set up with a Google Cloud account, and walks you through setting up a full or split tunnel VPN connection on your Android Phone.
+Run your own privacy-first ad blocking service for no monthly cost on Google Cloud's Compute Engine. This guide gets you set up with a Google Cloud account, and walks you through setting up a full or split tunnel VPN connection on your Android Phone.
 
-The goal of this guide is to enable you to safely and privately use the Internet on your phone without intrusive advertisements, and blocking your ISP, mobile carrier, or public Wi-Fi hotspot provider from gaining insight into your usage activity. You can choose to encrypt all your network traffic (uses 10% more data, but more secure), or just the DNS portion (the bare minimum for ad blocking and bypassing basic content filters).
+The goal of this guide is to enable you to safely and privately use the Internet on your phone without intrusive advertisements, and blocking your ISP, mobile carrier, or public Wi-Fi hotspot provider from gaining insight into your usage activity.
+
+You can choose to encrypt all your network traffic (uses 10% more data, but more secure), or just the DNS portion (the bare minimum for ad blocking and bypassing basic content filters).
+
+| Tunnel Type | Data Usage | Security | Ad Blocking |
+| -- | -- | -- | -- |
+| full | 10% more data usage | 100% encryption | yes
+| split | least data usage | DNS encryption only | yes
 
 # work in progress - check back often
 
@@ -13,10 +20,8 @@ The goal of this guide is to enable you to safely and privately use the Internet
 Go to https://cloud.google.com and click **Console** at the top right if you have previously used Google's Cloud Services, or click **Try Free** if it's your first time.
 
  ### Account Creation
- - **Step 1 of 2**
- Agree to the terms and continue. <br><img src="./images/screenshots/5.png" width="265">
- - **Step 2 of 2**
- Set up a payments profile and continue <br><img src="./images/screenshots/5.png" width="223">
+ - **Step 1 of 2** <br> Agree to the terms and continue. <br><img src="./images/screenshots/5.png" width="265">
+ - **Step 2 of 2** <br> Set up a payments profile and continue <br><img src="./images/screenshots/5.png" width="223">
  ### Project & Compute Engine Creation
  - Click the Hamburger Menu at the top left: <br><img src="./images/screenshots/1.png" width="197">
  - Click **Compute Engine**: <br><img src="./images/screenshots/2.png" width="138">
