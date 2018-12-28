@@ -11,12 +11,14 @@ Run your own privacy-first ad blocking service in the cloud for free on Google C
 Go to https://cloud.google.com and click **Console** at the top right if you have previously used Google's Cloud Services, or click **Try Free** if it's your first time.
 
  ### Account Creation
- - Step 1: Agree to the terms and continue.
- - Step 2: set up a payments profile and continue.
+ - Step 1: Agree to the terms and continue. <br><img src="./images/screenshots/5.png" width="530">
+ - Step 2: set up a payments profile and continue <br><img src="./images/screenshots/5.png" width="447">
  ### Compute Engine Creation
  - Click the Hamburger Menu at the top left: <br><img src="./images/screenshots/1.png" width="294">
  - Click **Compute Engine**: <br><img src="./images/screenshots/2.png" width="279">
  - Select **VM instances**: <br><img src="./images/screenshots/3.png" width="204">
+ - Create a Project if you don't already have one: <br><img src="./images/screenshots/4.png" width="499">
+ - 
 
 <img src="./images/logos/computeengine.svg" width="48" align="left">
 
