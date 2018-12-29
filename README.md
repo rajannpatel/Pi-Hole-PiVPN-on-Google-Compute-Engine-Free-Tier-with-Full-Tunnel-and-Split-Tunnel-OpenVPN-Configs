@@ -92,7 +92,7 @@ The default answer to reboot is **No** at the end of the installer. It is fine t
 
 <img src="./images/logos/openvpn.svg" width="48" align="left">
 
-# OpenVPN Steps
+# OpenVPN Configuration
 
 Get into the openvpn directory:
 
@@ -101,7 +101,7 @@ sudo su
 cd /etc/openvpn
 ```
 
-I prefer to use **nano**, so the command would be:
+Edit **server.conf**. I prefer to use **nano**, so the command would be:
 
 ```
 nano server.conf
@@ -145,11 +145,16 @@ Press `CTRL`+`O` to bring up the save prompt at the bottom of Nano, press **Ente
 To accept incoming OpenVPN connections over TCP on port 443:
 
 ```
+sudo su
 cd /etc/openvpn/
 cp server.conf server_tcp443.conf
 ```
 
-`nano server_tcp443.conf` and make these edits:
+Edit **server_tcp443.conf**. I prefer to use **nano**, so the command would be:
+
+```
+nano server_tcp443.conf
+```
 
 Replace the `proto udp` and `port 1194` lines with:
 
@@ -158,7 +163,7 @@ proto tcp
 port 443
 ```
 
-Edit the `server 10.8.0.0 255.255.255.0` line to reflect an IP address of **10.9.0.0**
+Edit the `server 10.8.0.0 255.255.255.0` line to reflect an IP address of **10.9.0.0**, so it reads as follows:
 
 ```
 server 10.9.0.0 255.255.255.0
@@ -197,6 +202,8 @@ shutdown -r now
 <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
 <a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn" target="_blank">
 <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
+
+## Client Configuration for Split Tunnel VPN
 
 When the app opens you are in the **Profiles** Tab.
 - Import your Profile, click the `+` at the top right.
