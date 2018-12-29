@@ -115,11 +115,11 @@ Comment out the line which reads `push "redirect-gateway def1"` so it reads as f
 
 The longer the keep-alive interval the longer it will take either end of the openvpn connection to detect whether the connection is no longer alive. Because mobile devices often lose connectivity and regain it, lower values are desirable.
 
-Comment out `keepalive 1800 3600` and add `keepalive 10 120` below it, so it appears as follows:
+Comment out `keepalive 1800 3600` and add `keepalive 10 60` below it, so it appears as follows:
 
 ```
 # keepalive 1800 3600
-keepalive 10 120
+keepalive 10 60
 ```
 
 Comment out the line which reads `cipher AES-256-CBC` and add `cipher AES-128-GCM` below it, so it reads as follows:
@@ -174,6 +174,13 @@ Above the line `push "dhcp-option DNS 10.8.0.1"` add this line so it reads as fo
 ```
 push "route 10.8.0.1"
 push "dhcp-option DNS 10.8.0.1"
+```
+
+Comment out `keepalive 10 60` and add `keepalive 10 120` below it, so it appears as follows:
+
+```
+# keepalive 1800 3600
+keepalive 10 120
 ```
 
 Comment out `fast-io` so it looks like this:
