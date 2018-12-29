@@ -39,7 +39,7 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 
 <img src="./images/logos/computeengine.svg" width="48" align="left">
 
-# Compute Engine Steps
+# Compute Engine Virtual Machine Setup
 
 - Create a Virtual Machine instance on Compute Engine: <br><img src="./images/screenshots/8.png" width="216">
 - Customize the instance: <br><img src="./images/screenshots/8.png" width="216">
@@ -53,7 +53,7 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 
 <img src="./images/logos/debian.svg" width="48" align="left">
 
-# Debian Steps
+# Debian Update & Upgrade
 
 ```
 sudo su
@@ -62,9 +62,10 @@ apt-get update && apt-get upgrade -y
 
 <img src="./images/logos/pihole.svg" width="48" align="left">
 
-# Pi-Hole Steps
+# Pi-Hole Installation
 
 ```
+sudo su
 curl -sSL https://install.pi-hole.net | bash
 ```
 
@@ -74,13 +75,14 @@ You will flow into a series of prompts in a blue screen.
 
 Choose OK or answer positively for all the other prompts.
 
-- Go to the Web Interface, log in, and <br><img src="./images/screenshots/18.png" width="237">
+- Go to the Web Interface, log in, and click **Settings**, and navigate to **DNS**. <br>Set your **Interface Listening Behavior** to **Listen on All Interfaces** on this page: <br><img src="./images/screenshots/18.png" width="237">
 
 <img src="./images/logos/pivpn.png" width="48" align="left">
 
-# PiVPN Steps
+# PiVPN Installation
 
 ```
+sudo su
 curl -L https://install.pivpn.io | bash
 ```
 
@@ -95,6 +97,7 @@ The default answer to reboot is **No** at the end of the installer. It is fine t
 Get into the openvpn directory:
 
 ```
+sudo su
 cd /etc/openvpn
 ```
 
@@ -195,29 +198,28 @@ shutdown -r now
 <a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn" target="_blank">
 <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
 
-When the app opens you are in the **Profiles** Tab. Import your Profile, click the `+` at the top right. Then click **Import** at the bottom left of the modal that appears. Click the Hamburger Menu at the top left to choose **Google Drive**, or your **Downloads** folder, depending on what method you used to get the **.ovpn** file to your phone.
+When the app opens you are in the **Profiles** Tab.
+- Import your Profile, click the `+` at the top right.
+- Then click **Import** at the bottom left of the modal that appears.
+- Click the Hamburger Menu at the top left to choose **Google Drive**, or your **Downloads** folder, depending on what method you used to get the **.ovpn** file to your phone.
+- Click the pencil icon next to the VPN profile you imported.
+  - Click the **Routing** Tab.
+    - Click **Excluded Networks** under IPv4 and add this:
+      ```
+      10.0.0.8/8 172.16.0.0/12 192.168.0.0/16
+      ```
+    - **Bypass VPN for local networks** should NOT have a checkmark. Uncheck it.
+    - Under the **Authentication/Encryption** Tab
+      - The **Encryption Cipher** should be `AES-128-GCM`
+    - Under the **Allowed Apps** Tab
+      - the **Duo** app and **Google Play Store** and all 3 Phone apps, **Phone**, **Phone Messages** and **Phone Services** apps should have a checkmark.
 
-Click the pencil icon next to the VPN profile you imported. Click the **Routing** Tab.
-
-Click **Excluded Networks** under IPv4 and add this:
-
-```
-10.0.0.8/8 172.16.0.0/12 192.168.0.0/16
-```
-
-**Bypass VPN for local networks** should NOT have a checkmark. Uncheck it.
-
-Under the **Authentication/Encryption** Tab
-
-The **Encryption Cipher** should be `AES-128-GCM`
-
-Under the **Allowed Apps** Tab the **Duo** app and **Google Play Store** and all 3 Phone apps, **Phone**, **Phone Messages** and **Phone Services** apps should be checked.
-
-Click the back button a couple times until you are at the Profiles tab again.
-
-Clicking the name of the VPN profile you imported should trigger a connection.
+- Click the back button a couple times until you are at the **Profiles** Tab again.
 
 Click the **Settings** Tab:
 - **OpenVPN 3 Core** should have a checkmark
 - click **Default VPN** and choose the VPN you have imported
 - **Connect on Boot** should have a checkmark
+
+Click the back button a couple times until you are at the **Profiles** Tab again.
+- Clicking the name of the VPN profile you imported should trigger a connection.
