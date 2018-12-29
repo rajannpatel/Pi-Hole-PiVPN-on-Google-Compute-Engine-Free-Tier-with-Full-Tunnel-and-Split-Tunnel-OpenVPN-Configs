@@ -268,7 +268,7 @@ When the app opens you are in the **Profiles** Tab.
     - Under the **Authentication/Encryption** Tab
       - The **Encryption Cipher** should be `AES-128-GCM`
     - Under the **Allowed Apps** Tab
-      - the **Duo** app and **Google Play Store** and all 3 Phone apps, **Phone**, **Phone Messages** and **Phone Services** apps should have a checkmark.
+      - the **Drive**, **Duo**, **Gmail**, **Google Play Store**, **Phone**, **Phone and Messaging Storage** and **Phone Services** apps should have a checkmark.
 
 - Click the back button a couple times until you are at the **Profiles** Tab again.
 
