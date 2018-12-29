@@ -281,3 +281,7 @@ Click the back button a couple times until you are at the **Profiles** Tab again
 ## Client Configuration for Full Tunnel VPN
 
 This is a work in progress. Full Tunnel VPN instructions will be coming soon.
+
+# Contributions Welcome
+
+If there is something that can be done better, or if this documentation can be improved in any way, please submit a Pull Request with your fixes or edits. Discussions regarding [Issues](https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs/issues) are welcome as well.
