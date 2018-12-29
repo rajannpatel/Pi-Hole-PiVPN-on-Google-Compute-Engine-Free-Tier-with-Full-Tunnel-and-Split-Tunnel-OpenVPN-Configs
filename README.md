@@ -8,15 +8,12 @@ The goal of this guide is to enable you to safely and privately use the Internet
 
 Run your own privacy-first ad blocking service within the [Free Usage Tier](https://cloud.google.com/free/) on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android Phone.
 
+The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) while benefiting from ad blocking at the DNS level.
+
 | Tunnel Type | Data Usage | Security | Ad Blocking |
 | -- | -- | -- | -- |
 | full | 10% more data usage | 100% encryption | yes
 | split | least data usage | DNS encryption only | yes
-
-### To-Do List (should be complete in the next week)
-- document known issues
-- add testing matrix, only known test devices include Pixel Phones
-- improve documentation for google cloud
 
 ---
 
@@ -43,17 +40,17 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 
 - Create a Virtual Machine instance on Compute Engine: <br><img src="./images/screenshots/8.png" width="216">
 - Customize the instance: <br><img src="./images/screenshots/8.png" width="216">
-- Use Static IPs: <br><img src="./images/screenshots/9.png" width="232">
-- <br><img src="./images/screenshots/10.png" width="238">
-- <br><img src="./images/screenshots/11.png" width="222">
-- <br><img src="./images/screenshots/12.png" width="260">
-- <br><img src="./images/screenshots/13.png" width="230">
-- <br><img src="./images/screenshots/14.png" width="395">
-- <br><img src="./images/screenshots/15.png" width="369">
+- Name your Virtual Machine **pi-hole**. <br>Choose a micro Machine Type in the dropdown. <br>Change the Boot Disk to be 30GB if you plan on keeping your DNS lookup records for any reason, otherwise the default 10GB disk allocation is adequate. <br>Allow HTTPS Traffic in the Firewall (add a checkmark). <br><img src="./images/screenshots/9.png" width="232">
+- Expand "Management, Security, disks, networking, sole tenancy" and click the "Network" tab. Click the Pencil icon under "Network Interfaces". <br><img src="./images/screenshots/10.png" width="238">
+- Reserve a Static Internal IP Address for your Primary Internal IP. <br><img src="./images/screenshots/11.png" width="222"> <br><img src="./images/screenshots/12.png" width="260">
+- The External IP Address should not be Ephemeral. Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
+- You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. <br><img src="./images/screenshots/15.png" width="369">
 
 <img src="./images/logos/debian.svg" width="48" align="left">
 
 # Debian Update & Upgrade
+
+Once you log into your Virtual Machine via SSH, you want to update and upgrade it.
 
 ```
 sudo su
