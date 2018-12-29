@@ -280,4 +280,4 @@ Click the back button a couple times until you are at the **Profiles** Tab again
 
 ## Client Configuration for Full Tunnel VPN
 
-This is a work in progress.
+This is a work in progress. Full Tunnel VPN instructions will be coming soon.
