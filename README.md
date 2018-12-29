@@ -279,3 +279,7 @@ Click the **Settings** Tab:
 
 Click the back button a couple times until you are at the **Profiles** Tab again.
 - Clicking the name of the VPN profile you imported should trigger a connection.
+
+## Client Configuration for Full Tunnel VPN
+
+This is a work in progress.
