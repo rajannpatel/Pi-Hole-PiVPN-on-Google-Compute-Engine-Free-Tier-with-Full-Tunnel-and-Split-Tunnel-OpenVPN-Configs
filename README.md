@@ -44,7 +44,7 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 - Expand **Management, Security, disks, networking, sole tenancy** and click the "Network" tab. Click the Pencil icon under "Network Interfaces". <br><img src="./images/screenshots/10.png" width="238">
 - Reserve a Static Internal IP Address for your Primary Internal IP. <br><img src="./images/screenshots/11.png" width="222"> <br><img src="./images/screenshots/12.png" width="260">
 - The External IP Address should not be Ephemeral. Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
-- You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. <br><img src="./images/screenshots/15.png" width="369">
+- You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. Make note of your External IP (it will be different from the screenshot below).<br><img src="./images/screenshots/15.png" width="369">
 - Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**. <br><img src="./images/screenshots/firewall.png" width="222"> <br>Click **Create Firewall Rule** at the top center of the page. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click the **Create** button.
 
 <img src="./images/logos/debian.svg" width="48" align="left">
@@ -73,7 +73,15 @@ You will flow into a series of prompts in a blue screen.
 
 Choose OK or answer positively for all the other prompts.
 
-- Go to the Web Interface, log in, and click **Settings**, and navigate to **DNS**. <br>Set your **Interface Listening Behavior** to **Listen on All Interfaces** on this page: <br><img src="./images/screenshots/18.png" width="237">
+Set a strong password that you will remember for the Web Interface
+
+```
+pihole -a -p
+```
+
+- Log into the web interface using the External IP that you noted down earlier at `http://your-external-ip/admin`
+
+- Click **Settings**, and navigate to **DNS**. <br>Set your **Interface Listening Behavior** to **Listen on All Interfaces** on this page: <br><img src="./images/screenshots/18.png" width="237">
 
 <img src="./images/logos/pivpn.png" width="48" align="left">
 
@@ -215,7 +223,7 @@ This command will output a success message which looks like this:
 
 ```
 ========================================================
-Done! mypixel3xl.ovpn successfully created! 
+Done! mypixel3xl.ovpn successfully created!
 mypixel3xl.ovpn was copied to:
   /home/myusername/ovpns
 for easy transfer. Please use this profile only on one
