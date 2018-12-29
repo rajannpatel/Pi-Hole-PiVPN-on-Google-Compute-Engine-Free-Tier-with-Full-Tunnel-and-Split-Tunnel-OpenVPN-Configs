@@ -15,10 +15,12 @@ The benefit of a Split Tunnel VPN is that you can still interact with devices on
 | full | 10% more data usage | 100% encryption | yes
 | split | least data usage | DNS encryption only | yes
 
-# TO-DO:
+# TO-DO List:
 
 - Add instructions for full tunnel on iOS. Split Tunnel on iOS is not supported at this time.
 - Add instructions for a full tunnel on Android.
+
+It may take me another 24 to 48 hours from today (Dec 29, 2018) to get these things on the TO-DO List addressed. Help is welcome :-)
 
 ---
 
