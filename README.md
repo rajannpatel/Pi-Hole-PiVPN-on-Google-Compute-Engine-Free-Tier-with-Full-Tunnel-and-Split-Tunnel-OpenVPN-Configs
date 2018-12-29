@@ -45,7 +45,7 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 - Reserve a Static Internal IP Address for your Primary Internal IP. <br><img src="./images/screenshots/11.png" width="222"> <br><img src="./images/screenshots/12.png" width="260">
 - The External IP Address should not be Ephemeral. Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
 - You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. <br><img src="./images/screenshots/15.png" width="369">
-- Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules** and **Create Firewall Rule**. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click **Create**. <br><img src="./images/screenshots/firewall.png" width="222">
+- Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**. <br><img src="./images/screenshots/firewall.png" width="222"> <br>Click **Create Firewall Rule** at the top center of the page. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click the **Create** button.
 
 <img src="./images/logos/debian.svg" width="48" align="left">
 
