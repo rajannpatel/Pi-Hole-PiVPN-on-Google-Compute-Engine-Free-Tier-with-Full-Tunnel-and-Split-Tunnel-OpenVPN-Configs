@@ -8,7 +8,7 @@ The goal of this guide is to enable you to safely and privately use the Internet
 
 Run your own privacy-first ad blocking service within the [Free Usage Tier](https://cloud.google.com/free/) on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android Phone.
 
-The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encyrpted connection to the cloud.
+The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encrypted connection to the cloud.
 
 | Tunnel Type | Data Usage | Security | Ad Blocking |
 | -- | -- | -- | -- |
