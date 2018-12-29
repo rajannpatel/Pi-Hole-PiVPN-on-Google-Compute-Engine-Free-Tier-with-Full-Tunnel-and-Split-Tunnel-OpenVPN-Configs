@@ -167,7 +167,7 @@ Edit the `server 10.8.0.0 255.255.255.0` line to reflect an IP address of **10.9
 server 10.9.0.0 255.255.255.0
 ```
 
-Above the line `push "dhcp-option DNS 10.8.0.1"` add this line so it reads as follows:
+Above the line `push "dhcp-option DNS 10.8.0.1"` add `push "route 10.8.0.1"` so it reads as follows:
 
 ```
 push "route 10.8.0.1"
