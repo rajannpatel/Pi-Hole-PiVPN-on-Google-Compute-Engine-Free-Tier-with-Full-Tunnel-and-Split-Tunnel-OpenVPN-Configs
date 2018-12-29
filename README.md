@@ -138,7 +138,7 @@ compress lz4-v2
 push "compress lz4-v2"
 ```
 
-Press `CTRL`+`O` to bring up the save prompt at the bottom of Nano, press **Enter** to save. Then press `CTRL`+`X` to exit
+Press `CTRL` `O` to bring up the save prompt at the bottom of Nano, press **Enter** to save. Then press `CTRL` `X` to exit
 
 
 
@@ -205,7 +205,13 @@ shutdown -r now
 
 # Managing the PiVPN
 
-Run `pivpn add nopass` and give your client a name. I like to use an alphanumeric string composed of the user's first name, and their device's make and model (no spaces and no special characters).
+Connect to the Pi-Hole server and set up an OpenVPN Client Profile
+
+```
+pivpn add nopass
+```
+
+Give your client a name. I like to use an alphanumeric string composed of the user's first name, and their device's make and model (no spaces and no special characters).
 
 This command will output a success message which looks like this:
 
@@ -218,14 +224,16 @@ for easy transfer. Please use this profile only on one
 device and create additional profiles for other devices.
 ========================================================
 ```
-Getting the .ovpn file to your phone is a little challenging. Maximize your SSH window and then type:
+
+To get the **mypixel3xl.ovpn** file to your phone it is easiest to maximize your SSH window and print the file to the terminal window, to copy & paste the output:
 
 ```
 cat /home/myusername/ovpns/mypixel3xl.ovpn
 ```
-Press `CTRL-` until the screen zooms out to a point where you can see the entire ovpn file printed on the screen. The first line will have the word `client` and the last line is `</tls-crypt>`. Highlighting this entire chunk with a mouse will cause a scissor icon to appear in the middle of your SSH window, this means this selection has been copied to your clipboard.
 
-Paste this into your favorite Text Editor and save the file with a .ovpn extension.
+Press `CTRL` `-` until the screen zooms out to a point where you can see the entire ovpn file printed on the screen. The first line will have the word `client` and the last line is `</tls-crypt>`. Highlighting this entire chunk with a mouse will cause a scissor icon to appear in the middle of your SSH window, this means this selection has been copied to your clipboard.
+
+Paste this into your favorite Text Editor and save the file with an **.ovpn** extension.
 
 Around Line 12, edit the line which reads `cipher AES-256-CBC` and change it to read:
 
@@ -233,7 +241,7 @@ Around Line 12, edit the line which reads `cipher AES-256-CBC` and change it to 
 cipher AES-128-GCM
 ```
 
-E-mail the file to yourself, upload in Google Drive, or use whatever secure method you prefer to transfer this file to your phone. This file needs to be downloaded to your phone, you can't load it into the OpenVPN application on your phone from the cloud.
+E-mail the file to yourself, upload in Google Drive, or use whatever secure method you prefer to transfer this file to your phone. This file can be downloaded to your phone.
 
 <img src="./images/logos/openvpnforandroid.svg" width="48" align="left">
 
