@@ -40,11 +40,12 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 
 - Create a Virtual Machine instance on Compute Engine: <br><img src="./images/screenshots/8.png" width="216">
 - Customize the instance: <br><img src="./images/screenshots/8.png" width="216">
-- Name your Virtual Machine **pi-hole**. <br>Choose a micro Machine Type in the dropdown. <br>Change the Boot Disk to be 30GB if you plan on keeping your DNS lookup records for any reason, otherwise the default 10GB disk allocation is adequate. <br>Allow HTTPS Traffic in the Firewall (add a checkmark). <br><img src="./images/screenshots/9.png" width="232">
-- Expand "Management, Security, disks, networking, sole tenancy" and click the "Network" tab. Click the Pencil icon under "Network Interfaces". <br><img src="./images/screenshots/10.png" width="238">
+- Name your Virtual Machine **pi-hole**. <br>Your Region selection should be any US region only (excluding Northern Virginia [us-east4]). I have used **us-east1** and the **us-east1-b** zone because it is closest to me. <br>Choose a **micro** Machine Type in the dropdown. <br>Change the **Boot Disk** to be **30GB** if you plan on keeping your DNS lookup records for any reason, otherwise the default **10GB** disk allocation is adequate. <br>**Allow HTTPS traffic** in the Firewall (add a checkmark). <br><img src="./images/screenshots/9.png" width="232">
+- Expand **Management, Security, disks, networking, sole tenancy** and click the "Network" tab. Click the Pencil icon under "Network Interfaces". <br><img src="./images/screenshots/10.png" width="238">
 - Reserve a Static Internal IP Address for your Primary Internal IP. <br><img src="./images/screenshots/11.png" width="222"> <br><img src="./images/screenshots/12.png" width="260">
 - The External IP Address should not be Ephemeral. Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
 - You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. <br><img src="./images/screenshots/15.png" width="369">
+- Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules** and **Create Firewall Rule**. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click **Create**. <br><img src="./images/screenshots/firewall.png" width="222">
 
 <img src="./images/logos/debian.svg" width="48" align="left">
 
