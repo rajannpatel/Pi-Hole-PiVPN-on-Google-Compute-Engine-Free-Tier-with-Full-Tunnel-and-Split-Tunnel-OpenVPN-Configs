@@ -47,7 +47,8 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 
 - Create a Virtual Machine instance on Compute Engine: <br><img src="./images/screenshots/8.png" width="216">
 - Customize the instance: <br><img src="./images/screenshots/8.png" width="216">
-- Name your Virtual Machine **pi-hole**. <br>Your Region selection should be any US region only (excluding Northern Virginia [us-east4]). I have used **us-east1** and the **us-east1-b** zone because it is closest to me. <br>Choose a **micro** Machine Type in the dropdown. <br>Change the **Boot Disk** to be **30GB** if you plan on keeping your DNS lookup records for any reason, otherwise the default **10GB** disk allocation is adequate. <br>**Allow HTTPS traffic** in the Firewall (add a checkmark). <br><img src="./images/screenshots/9.png" width="232">
+- Name your Virtual Machine **pi-hole**. <br>Your Region selection should be any US region only (excluding Northern Virginia [us-east4]). I have used **us-east1** and the **us-east1-b** zone because it is closest to me. <br>Choose a **micro** Machine Type in the dropdown. <br>Change the **Boot Disk** to be **30GB** if you plan on keeping your DNS lookup records for any reason, otherwise the default **10GB** disk allocation is adequate. <br>**Allow HTTP traffic** in the Firewall (add a checkmark).
+<br>**Allow HTTPS traffic** in the Firewall (add a checkmark). <br><img src="./images/screenshots/9.png" width="232">
 - Expand **Management, Security, disks, networking, sole tenancy** and click the "Network" tab. Click the Pencil icon under "Network Interfaces". <br><img src="./images/screenshots/10.png" width="238">
 - Reserve a Static Internal IP Address for your Primary Internal IP. <br><img src="./images/screenshots/11.png" width="222"> <br><img src="./images/screenshots/12.png" width="260">
 - The External IP Address should not be Ephemeral. Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
@@ -114,6 +115,8 @@ sudo su
 cd /etc/openvpn
 ```
 
+## Server Configuration for Split Tunnel VPN over UDP on Port 1194
+
 Edit **server.conf**. I prefer to use **nano**, so the command would be:
 
 ```
@@ -153,7 +156,7 @@ push "compress lz4-v2"
 
 Press `CTRL` `O` to bring up the save prompt at the bottom of Nano, press **Enter** to save. Then press `CTRL` `X` to exit
 
-
+## Server Configuration for Split Tunnel VPN over TCP on Port 443
 
 To accept incoming OpenVPN connections over TCP on port 443:
 
@@ -207,6 +210,8 @@ Add the OpenVPN service on Port 443:
 ```
 systemctl enable openvpn@server_tcp443.service
 ```
+
+## Finishing Steps for Split Tunnel VPN Confgurations
 
 Reboot the server with this shutdown command:
 
@@ -265,7 +270,7 @@ E-mail the file to yourself, upload in Google Drive, or use whatever secure meth
 <a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn" target="_blank">
 <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
 
-## Client Configuration for Split Tunnel VPN
+## Client Configuration for Split Tunnel VPN over UDP on Port 1194
 
 When the app opens you are in the **Profiles** Tab.
 - Import your Profile, click the `+` at the top right.
