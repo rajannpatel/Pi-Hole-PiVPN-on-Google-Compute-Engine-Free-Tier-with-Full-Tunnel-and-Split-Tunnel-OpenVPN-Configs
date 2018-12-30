@@ -91,6 +91,8 @@ pihole -a -p
 
 - Click **Settings**, and navigate to **DNS**. <br>Set your **Interface Listening Behavior** to **Listen on All Interfaces** on this page: <br><img src="./images/screenshots/18.png" width="237">
 
+- Click the **Save** Button at the bottom of the page.
+
 <img src="./images/logos/pivpn.png" width="48" align="left">
 
 # PiVPN Installation
@@ -205,7 +207,9 @@ Comment out `fast-io` so it looks like this:
 # fast-io
 ```
 
-Add the OpenVPN service on Port 443:
+Press `CTRL` `O` to bring up the save prompt at the bottom of Nano, press **Enter** to save. Then press `CTRL` `X` to exit
+
+Add the OpenVPN service on Port 443 by running this at the command prompt in your BASH shell:
 
 ```
 systemctl enable openvpn@server_tcp443.service
