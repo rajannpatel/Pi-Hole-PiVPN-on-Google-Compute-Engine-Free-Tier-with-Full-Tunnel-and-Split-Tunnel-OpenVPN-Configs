@@ -173,6 +173,7 @@ At the bottom of the file add the following lines:
 > # performance stuff
 > fast-io
 > compress lz4-v2
+> push "compress lz4-v2"
 > ```
 
 Press `CTRL` `O` to bring up the save prompt at the bottom of Nano, press **Enter** to save. Then press `CTRL` `X` to exit
