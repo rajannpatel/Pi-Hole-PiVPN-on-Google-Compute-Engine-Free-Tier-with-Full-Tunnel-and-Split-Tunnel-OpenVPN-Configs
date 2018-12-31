@@ -85,7 +85,7 @@ You will flow into a series of prompts in a blue screen.
 
 - Choose OK or answer positively for all the prompts until the "Select Protocols" question appears. IPv6 needs to be deselected as shown below: <br><img src="./images/screenshots/16.png" width="281">
 
-Choose OK or answer positively for all the other prompts.
+- Choose OK or answer positively for all the other prompts.
 
 Set a strong password that you will remember for the Web Interface
 
@@ -93,7 +93,7 @@ Set a strong password that you will remember for the Web Interface
 pihole -a -p
 ```
 
-- Log into the web interface using the External IP that you noted down earlier at `http://your-external-ip/admin/settings.php?tab=dns`
+- Log into the web interface using the External IP that you noted down earlier at<br> `http://your-external-ip/admin/settings.php?tab=dns`
 
 - Click **Settings**, and navigate to **DNS**. <br>Set your **Interface Listening Behavior** to **Listen on All Interfaces** on this page: <br><img src="./images/screenshots/18.png" width="237">
 
@@ -115,11 +115,9 @@ Install PiVPN by running this command in the bash shell:
 curl -L https://install.pivpn.io | bash
 ```
 
-You will flow into a series of prompts in a blue screen. All of the default values are appropriate. Choose OK or answer positively for all the prompts until you have to choose an upstream DNS provider.
+You will flow into a series of prompts in a blue screen. All of the default values are appropriate.
 
-The default answer is Google. Choose **Custom** and set an IP Address of **10.8.0.1**
-<br><img src="./images/screenshots/custom-dns.png" width="284">
-<br><img src="./images/screenshots/custom-dns-ip.png" width="284">
+- Choose OK or answer positively for all the prompts until you have to choose an upstream DNS provider. The default answer is Google. Choose **Custom** and set an IP Address of **10.8.0.1** <br><img src="./images/screenshots/custom-dns.png" width="284"><br><img src="./images/screenshots/custom-dns-ip.png" width="284">
 
 The default answer to reboot is **No** at the end of the installer. It is fine to say **No**, we have a few more things to edit while we're logged in as root.
 
@@ -405,6 +403,8 @@ Click the Hamburger Menu at the top left and click **Settings**
 - Under **DNS Fallback** the checkbox should be deselected/empty. (By default the checkbox is ticked)
 
 Click **Save** at the top right.
+
+<img src="./images/logos/openvpn.svg" width="48" align="left">
 
 # Full & Split Tunnel VPN on iOS with the "OpenVPN Connect" app
 
