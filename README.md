@@ -267,7 +267,7 @@ E-mail the file to yourself, upload in Google Drive, or use whatever secure meth
 
 <img src="./images/logos/openvpnforandroid.svg" width="48" align="left">
 
-# OpenVPN for Android
+# "OpenVPN for Android" to do a Split Tunnel VPN
 
 <a href="https://f-droid.org/repository/browse/?fdid=de.blinkt.openvpn" target="_blank">
 <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
@@ -305,6 +305,38 @@ Click the back button a couple times until you are at the **Profiles** Tab again
 ## Client Configuration for Full Tunnel VPN
 
 This is a work in progress. Full Tunnel VPN instructions will be coming soon.
+
+# Verify Everything Works
+
+## Test your Full Tunnel VPN
+
+Go here: https://www.google.com/search?q=what+is+my+ip
+
+You will see your IP address displayed very prominently at the top above the label: **Your public IP address**
+
+If you see anything other than the External IP Address of your Google Compute Engine Virtual Machine, then you do not have a Full Tunnel VPN.
+
+If you see an IPv6 address while connected to the VPN, then you have a big problem.
+
+<img src="./images/screenshots/your-public-ip.png" width="235">
+
+You can do some further troubleshooting by visiting: https://www.whatismyip.com
+
+If you see no IPv4 address, and a public IPv6 address identical to the one from the Google search result earlier, it means your tunnel is not processing any IPv4 traffic, and you are going out to the Internet over IPv6 directly.
+
+This typically means you have a problem with your server configuration and client configuration files.
+
+## Test for a DNS Leak
+
+If DNS lookups are not happening exclusively over the VPN connection to the Pi-Hole server, then you have a DNS leak. A DNS leak will result in ads appearing.
+
+In the Pi-Hole Web Interface at `http://your-external-ip/admin/settings.php?tab=dns` choose just one DNS provider. The two Google IPv4 DNS servers will give you the highest performance. For our test, we will deselect the Google IPv4 DNS servers and choose the 2 Cloudflare DNS servers.
+
+<img src="./images/screenshots/test-dns.png" width="378">
+
+On your device, go to https://www.dnsleaktest.com/ and click the **Extended test** button. On the table in the next page, every single row must say "Cloudflare". If you see any IPs that do not belong to Cloudflare, you have a DNS leak. This typically means you have a problem with your server configuration and client configuration files.
+
+Turn your VPN off and try the **Extended test** again, you will see your default DNS servers as defined by your Internet provider or your Router.
 
 # Contributions Welcome
 
