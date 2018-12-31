@@ -277,10 +277,10 @@ E-mail the file to yourself, upload in Google Drive, or use whatever secure meth
 ## Client Configuration for Split Tunnel VPN over UDP on Port 1194
 
 When the app opens you are in the **Profiles** Tab.
-- Import your Profile, click the `+` at the top right.
+- Import your Profile, click the `+` at the top right. <br><img src="./images/screenshots/import-plus.png" width="360">
 - Then click **Import** at the bottom left of the modal that appears.
 - Click the Hamburger Menu at the top left to choose **Google Drive**, or your **Downloads** folder, depending on what method you used to get the **.ovpn** file to your phone.
-- Click the pencil icon next to the VPN profile you imported.
+- Click the pencil icon next to the VPN profile you imported. <br><img src="./images/screenshots/pencil.png" width="360">
   - Click the **Routing** Tab.
     - Click **Excluded Networks** under IPv4 and add this:
       ```
@@ -318,6 +318,7 @@ If you see anything other than the External IP Address of your Google Compute En
 
 If you see an IPv6 address while connected to the VPN, then you have a big problem.
 
+Example of an IPv6 address: <br>
 <img src="./images/screenshots/your-public-ip.png" width="235">
 
 You can do some further troubleshooting by visiting: https://www.whatismyip.com
@@ -331,6 +332,13 @@ This typically means you have a problem with your server configuration and clien
 If DNS lookups are not happening exclusively over the VPN connection to the Pi-Hole server, then you have a DNS leak. A DNS leak will result in ads appearing.
 
 In the Pi-Hole Web Interface at `http://your-external-ip/admin/settings.php?tab=dns` choose just one DNS provider. The two Google IPv4 DNS servers will give you the highest performance. For our test, we will deselect the Google IPv4 DNS servers and choose the 2 Cloudflare DNS servers.
+
+## Real World Adblock Tests
+
+A quick test page to verify if your ad blocking is working: https://blockads.fivefilters.org/?pihole
+
+The Pi-Hole project also maintains a list of excellent advertising-littered pages that you can test:
+https://pi-hole.net/pages-to-test-ad-blocking-performance/
 
 <img src="./images/screenshots/test-dns.png" width="378">
 
