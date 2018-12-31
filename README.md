@@ -333,18 +333,18 @@ If DNS lookups are not happening exclusively over the VPN connection to the Pi-H
 
 In the Pi-Hole Web Interface at `http://your-external-ip/admin/settings.php?tab=dns` choose just one DNS provider. The two Google IPv4 DNS servers will give you the highest performance. For our test, we will deselect the Google IPv4 DNS servers and choose the 2 Cloudflare DNS servers.
 
+<img src="./images/screenshots/test-dns.png" width="378">
+
+On your device, go to https://www.dnsleaktest.com/ and click the **Extended test** button. On the table in the next page, every single row must say "Cloudflare". If you see any IPs that do not belong to Cloudflare, you have a DNS leak. This typically means you have a problem with your server configuration and client configuration files.
+
+Turn your VPN off and try the **Extended test** again, you will see your default DNS servers as defined by your Internet provider or your Router.
+
 ## Real World Adblock Tests
 
 A quick test page to verify if your ad blocking is working: https://blockads.fivefilters.org/?pihole
 
 The Pi-Hole project also maintains a list of excellent advertising-littered pages that you can test:
 https://pi-hole.net/pages-to-test-ad-blocking-performance/
-
-<img src="./images/screenshots/test-dns.png" width="378">
-
-On your device, go to https://www.dnsleaktest.com/ and click the **Extended test** button. On the table in the next page, every single row must say "Cloudflare". If you see any IPs that do not belong to Cloudflare, you have a DNS leak. This typically means you have a problem with your server configuration and client configuration files.
-
-Turn your VPN off and try the **Extended test** again, you will see your default DNS servers as defined by your Internet provider or your Router.
 
 # Contributions Welcome
 
