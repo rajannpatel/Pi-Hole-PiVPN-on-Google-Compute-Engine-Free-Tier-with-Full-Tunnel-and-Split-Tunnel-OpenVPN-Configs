@@ -270,9 +270,9 @@ E-mail the file to yourself, upload in Google Drive, or use whatever secure meth
 # "OpenVPN for Android" to do a Split Tunnel VPN
 
 <a href="https://f-droid.org/repository/browse/?fdid=de.blinkt.openvpn" target="_blank">
-<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
+<img src="./images/logos/f-droid.svg" alt="Get it on F-Droid" height="80"></a>
 <a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn" target="_blank">
-<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
+<img src="./images/logos/google-play.svg" alt="Get it on Google Play" height="60"></a>
 
 ## Client Configuration for Split Tunnel VPN over UDP on Port 1194
 
