@@ -137,7 +137,7 @@ Get into the openvpn directory by running this command in the bash shell:
 cd /etc/openvpn
 ```
 
-## Server Configuration for Split Tunnel VPN over UDP on Port 1194
+## Server Configuration for VPN over UDP on Port 1194
 
 Edit **server.conf**. I use **nano** to edit by running this command in the bash shell:
 
@@ -177,7 +177,7 @@ At the bottom of the file add the following lines:
 
 Press `CTRL` `O` to bring up the save prompt at the bottom of Nano, press **Enter** to save. Then press `CTRL` `X` to exit
 
-## Server Configuration for Split Tunnel VPN over TCP on Port 443
+## Server Configuration for VPN over TCP on Port 443
 
 Ensure you have elevated root privileges by running this command in the bash shell:
 
