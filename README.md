@@ -6,7 +6,7 @@ The goal of this guide is to enable you to safely and privately use the Internet
 
 <img src="./images/upfront-cost.svg" width="90" align="right">
 
-Run your own privacy-first ad blocking service within the [Free Usage Tier](https://cloud.google.com/free/) on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android Phone.
+Run your own privacy-first ad blocking service within the [Free Usage Tier](https://cloud.google.com/free/) on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android and iOS devices.
 
 The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encrypted connection to the cloud.
 
@@ -413,7 +413,7 @@ Click **Save** at the top right.
 <a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981?mt=8" target="_blank">
 <img src="./images/logos/app-store.svg" alt="Get it on the App Store" height="60"></a>
 
-Install the "OpenVPN Connect" application on your Android device.
+Install the "OpenVPN Connect" application on your iOS device.
 
 ## Device Configuration for Full & Split Tunnel VPN
 
