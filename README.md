@@ -332,6 +332,8 @@ Below `cipher AES-128-GCM` add this line:
 > redirect-gateway def1
 > ```
 
+[Issue # 9](https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs/issues/9) outlines a known problem with Full Tunnel VPN connections over Port 443.
+
 ## Make these .ovpn files available on your phone or tablet
 
 E-mail these files to yourself, upload in Google Drive, or use whatever secure method you prefer to transfer this file to your device. It is safe to download this file to your device.
