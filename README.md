@@ -244,7 +244,7 @@ Add the OpenVPN service on Port 443 by running this command in your bash shell:
 systemctl enable openvpn@server_tcp443.service
 ```
 
-## Finishing Steps for Split Tunnel VPN Confgurations
+## Finalize VPN Confgurations on Server
 
 Reboot the server by running this command in your bash shell:
 
