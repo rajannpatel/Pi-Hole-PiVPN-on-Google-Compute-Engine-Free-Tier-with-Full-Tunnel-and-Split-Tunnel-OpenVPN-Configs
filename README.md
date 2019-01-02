@@ -507,7 +507,9 @@ A quick test page to verify if your ad blocking is working: https://blockads.fiv
 The Pi-Hole project also maintains a list of excellent advertising-littered pages that you can test:
 https://pi-hole.net/pages-to-test-ad-blocking-performance/
 
-# Security and Lockdown
+<img src="./images/logos/firewall.svg" width="48" align="left">
+
+# Firewall
 
 You may not be comfortable leaving the Pi-Hole web interface accessible on a Public IP
 
