@@ -60,11 +60,16 @@ Google's Public DNS has the lowest latency to your Pi-Hole, because it resolves 
 The cipher which offers the quickest performance hinges on features the CPU has available. The Intel CPUs on Google Compute Engine support AES and RDRAND at the hardware level, so we benefit from using GCM over CBC.
 
 We verify the processor has the AES/AES-NI instruction set with this command:
+
 ```
 lscpu
 ```
 
-The Flags should show `rdrand`.
+The Flags should show:
+
+> ```
+> rdrand
+> ```
 
 Secondly, a correct BIOS configuration is identified with this command:
 
@@ -72,7 +77,11 @@ Secondly, a correct BIOS configuration is identified with this command:
 grep -o aes /proc/cpuinfo
 ```
 
-The output should read `aes`.
+The output should read:
+
+>```
+> aes
+> ```
 
 Next, we verify if AES-NI optimized drivers are loaded into Linux with this command:
 
