@@ -428,12 +428,14 @@ Click the Hamburger Menu at the top left and click **Settings**
 - Under **Compression**, the **Downlink Only** button should be selected. (The default selection is **No**)
 - Under **DNS Fallback** the checkbox should be deselected/empty. (By default the checkbox is ticked)
 
+# Full & Split Tunnel VPN on Computers
+
 > ## NOTE
 > Due to the amount of bandwidth a computer could use, it is recommended to use the Split Tunnel **.ovpn** profiles on computers, and not Full Tunnel.
 
 <img src="./images/logos/viscosity.png" width="48" align="left">
 
-# Full & Split Tunnel VPN on Windows or macOS with Viscosity VPN (paid software)
+## Viscosity VPN for macOS or Windows (commercial software)
 
 - [Getting Started with Viscosity on macOS](https://www.sparklabs.com/support/kb/article/getting-started-with-viscosity-mac/)
 - [Getting Started with Viscosity on Windows](https://www.sparklabs.com/support/kb/article/getting-started-with-viscosity-windows/)
@@ -442,7 +444,7 @@ Import the Split Tunnel **.ovpn** files once Viscosity VPN is installed and runn
 
 <img src="./images/logos/openvpn.svg" width="48" align="left">
 
-# Full & Split Tunnel VPN on Windows with OpenVPN GUI (open source software)
+## OpenVPN GUI for Windows (open source software)
 
 - [Download the OpenVPN Windows Installer](https://openvpn.net/community-downloads/)
 - [Getting Started with OpenVPN GUI on Windows](https://openvpn.net/vpn-server-resources/installation-guide-for-openvpn-connect-client-on-windows/)
@@ -451,7 +453,7 @@ Import the Split Tunnel **.ovpn** files once the OpenVPN GUI is installed and ru
 
 <img src="./images/logos/tunnelblick.png" width="48" align="left">
 
-# Full & Split Tunnel VPN on macOS with Tunnelblick (open source software)
+## Tunnelblick for macOS (open source software)
 
 You can install Tunnelblick with Homebrew:
 
