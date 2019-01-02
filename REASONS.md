@@ -2,7 +2,7 @@
 
 <img src="./images/faq.svg" height="150" align="right">
 
-These concerns determined the choices I made in writing this guide:
+These factors determined the choices I made in writing this guide:
 
 1. Security & Privacy
 2. Cost
@@ -49,31 +49,56 @@ DNS latency is caused by the following 2 concerns:
 
 Choosing a DNS server with the lowest latency is the simplest way to address concern #1.
 
+#### Use Google Public DNS
+
 Google's Public DNS has the lowest latency to your Pi-Hole, because it resolves completely within Google's internal private Premium Tier network. It does not make sense to choose any other DNS provider from a performance standpoint.
 
-<img src="./images/logos/faq-dns.svg" height="36" align="left">
+<img src="./images/logos/faq-cpu.svg" height="36" align="left">
 
 ### CPU
 
-The cipher which offers the quickest performance hinges on features the CPU has available. The Intel CPUs on Google Compute Engine support AES and RDRAND at the hardware level, so we benefit from using a GCM over CBC.
+The cipher which offers the quickest performance hinges on features the CPU has available. The Intel CPUs on Google Compute Engine support AES and RDRAND at the hardware level, so we benefit from using GCM over CBC.
 
-We verify the processor has the AES/AES-NI instruction set with `lscpu`, the Flags should show "rdrand".
-
-Secondly, a correct BIOS configuration is identified with: `grep -o aes /proc/cpuinfo`, the output should read "aes". 
-
-Next, we verify if AES-NI optimized drivers are loaded into Linux with `sort -u /proc/crypto | grep module`, the following modules should be in the list:
-
+We verify the processor has the AES/AES-NI instruction set with this command:
 ```
-module       : aesni_intel
-module       : aes_x86_64
+lscpu
 ```
 
-And last, we verify if OpenSSL is configured to take advantage of AES-NI: `openssl engine`
+The Flags should show `rdrand`.
+
+Secondly, a correct BIOS configuration is identified with this command:
+
+```
+grep -o aes /proc/cpuinfo
+```
+
+The output should read `aes`.
+
+Next, we verify if AES-NI optimized drivers are loaded into Linux with this command:
+
+```
+sort -u /proc/crypto | grep module
+```
+
+The following modules should be in the list:
+
+> ```
+> module       : aesni_intel
+> module       : aes_x86_64
+> ```
+
+And last, we verify if OpenSSL is configured to take advantage of AES-NI with this command:
+
+```
+openssl engine
+```
+
 The output should read:
-```
-(rdrand) Intel RDRAND engine
-(dynamic) Dynamic engine loading support
-```
+
+> ```
+> (rdrand) Intel RDRAND engine
+> (dynamic) Dynamic engine loading support
+> ```
 
 Source: https://kazoo.ga/quick-benchmark-cbc-vs-gcm/
 
