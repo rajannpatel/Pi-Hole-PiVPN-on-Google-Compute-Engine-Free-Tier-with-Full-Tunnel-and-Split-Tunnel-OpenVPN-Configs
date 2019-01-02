@@ -505,6 +505,31 @@ A quick test page to verify if your ad blocking is working: https://blockads.fiv
 The Pi-Hole project also maintains a list of excellent advertising-littered pages that you can test:
 https://pi-hole.net/pages-to-test-ad-blocking-performance/
 
+# Security and Lockdown
+
+You may not be comfortable leaving the Pi-Hole web interface accessible on a Public IP
+
+If you do not wish for the Pi-Hole web interface to be accessible publicly, disable Port 80 in your Google Cloud Firewall.
+
+1. Log into Google Cloud Console: https://console.cloud.google.com/
+2. Ensure your Project is selected in the blue bar at the top (next to the words "Google Cloud Console); by default it should be
+3. Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**
+4. Click **default-allow-http** in the table
+5. Click **Edit** at the top of the page
+6. Click **Disable Rule** above the "Save" button to reveal a radio button group
+7. Select **Disabled**
+8. Click the **Save** button
+
+To access your Pi-Hole web interface once you do this, you will have to connect via VPN, and then go to http://10.8.0.1 if you are using a UDP profile (desirable), or http://10.9.0.1 if you are using the TCP profile (less desirable).
+
+Other Firewall rules you can safely disable:
+
+- **default-allow-rdp** is not necessary, because your Pi-Hole is not running on a Windows server and there is no service running on Port 3389
+
+Firewall rules that are inconvenient to disable:
+
+- **default-allow-ssh** should really only be open to Google's private network, alas they leave it open to the whole world by default. Nobody can successfully brute force their way into your server on Port 22, because it's not secured with passwords. It is secured with keys. If you disable this rule, you will not be able to use the browser based SSH interface in the Google Cloud Console until you re-enable this rule.
+
 # Contributions Welcome
 
 If there is something that can be done better, or if this documentation can be improved in any way, please submit a Pull Request with your fixes or edits.
