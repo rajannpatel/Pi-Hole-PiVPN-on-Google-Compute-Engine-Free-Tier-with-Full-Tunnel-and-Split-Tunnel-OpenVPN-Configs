@@ -498,6 +498,8 @@ On your device, go to https://www.dnsleaktest.com/ and click the **Extended test
 
 Turn your VPN off and try the **Extended test** again, you will see your default DNS servers as defined by your Internet provider or your Router.
 
+Once you are done testing, only use the Google IPv4 Upstream DNS Servers if you want the fastest DNS resolvers for your Pi-Hole. You can use any of the other Upstream DNS servers if speed is not your number one requirement.
+
 ## Test the Ad-blocking
 
 A quick test page to verify if your ad blocking is working: https://blockads.fivefilters.org/?pihole
