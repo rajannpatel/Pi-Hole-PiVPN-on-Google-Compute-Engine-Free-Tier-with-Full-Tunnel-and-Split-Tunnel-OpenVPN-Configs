@@ -439,7 +439,7 @@ Click the Hamburger Menu at the top left and click **Settings**
 
 <img src="./images/logos/viscosity.png" width="48" align="left">
 
-## Viscosity VPN on macOS or Windows
+## "Viscosity VPN" on macOS or Windows
 
 This is commercial software.
 
@@ -461,7 +461,7 @@ Import the Split Tunnel **.ovpn** files once the OpenVPN GUI is installed and ru
 
 <img src="./images/logos/tunnelblick.png" width="48" align="left">
 
-## Tunnelblick on macOS
+## "Tunnelblick" on macOS
 
 This is open source software.
 
