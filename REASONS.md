@@ -69,11 +69,11 @@ The cipher which offers the quickest performance hinges on features the CPU has 
 lscpu
 ```
 
-  The Flags should show:
+    The Flags should show:
 
-  > ```
-  > rdrand
-  > ```
+    > ```
+    > rdrand
+    > ```
 
 2. Verify the correct BIOS configuration is present with this command:
 
