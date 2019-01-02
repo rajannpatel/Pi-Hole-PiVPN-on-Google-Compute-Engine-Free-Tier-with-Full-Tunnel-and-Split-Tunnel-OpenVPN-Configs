@@ -69,11 +69,11 @@ The cipher which offers the quickest performance hinges on features the CPU has 
 lscpu
 ```
 
-The Flags should show:
+  The Flags should show:
 
-> ```
-> rdrand
-> ```
+  > ```
+  > rdrand
+  > ```
 
 2. Verify the correct BIOS configuration is present with this command:
 
@@ -81,11 +81,11 @@ The Flags should show:
 grep -o aes /proc/cpuinfo
 ```
 
-The output should read:
+  The output should read:
 
->```
-> aes
-> ```
+  >```
+  > aes
+  > ```
 
 3. Verify if AES-NI optimized drivers are loaded into Linux with this command:
 
@@ -93,12 +93,12 @@ The output should read:
 sort -u /proc/crypto | grep module
 ```
 
-The following modules should be in the list:
+  The following modules should be in the list:
 
-> ```
-> module       : aesni_intel
-> module       : aes_x86_64
-> ```
+  > ```
+  > module       : aesni_intel
+  > module       : aes_x86_64
+  > ```
 
 4. Verify if OpenSSL is configured to take advantage of AES-NI with this command:
 
@@ -106,14 +106,14 @@ The following modules should be in the list:
 openssl engine
 ```
 
-The output should read:
+  The output should read:
 
-> ```
-> (rdrand) Intel RDRAND engine
-> (dynamic) Dynamic engine loading support
-> ```
+  > ```
+  > (rdrand) Intel RDRAND engine
+  > (dynamic) Dynamic engine loading support
+  > ```
 
-Source: https://kazoo.ga/quick-benchmark-cbc-vs-gcm/
+  Source: https://kazoo.ga/quick-benchmark-cbc-vs-gcm/
 
 #### Encryption Level
 
