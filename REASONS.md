@@ -59,9 +59,11 @@ Google's Public DNS has the lowest latency to your Pi-Hole, because it resolves 
 
 ### CPU
 
+#### Cipher
+
 The cipher which offers the quickest performance hinges on features the CPU has available. The Intel CPUs on Google Compute Engine support AES and RDRAND at the hardware level, so we benefit from using GCM over CBC.
 
-We verify the processor has the AES/AES-NI instruction set with this command:
+1. Verify the processor has the AES/AES-NI instruction set with this command:
 
 ```
 lscpu
@@ -73,7 +75,7 @@ The Flags should show:
 > rdrand
 > ```
 
-Secondly, a correct BIOS configuration is identified with this command:
+2. Verify the correct BIOS configuration is present with this command:
 
 ```
 grep -o aes /proc/cpuinfo
@@ -85,7 +87,7 @@ The output should read:
 > aes
 > ```
 
-Next, we verify if AES-NI optimized drivers are loaded into Linux with this command:
+3. Verify if AES-NI optimized drivers are loaded into Linux with this command:
 
 ```
 sort -u /proc/crypto | grep module
@@ -98,7 +100,7 @@ The following modules should be in the list:
 > module       : aes_x86_64
 > ```
 
-And last, we verify if OpenSSL is configured to take advantage of AES-NI with this command:
+4. Verify if OpenSSL is configured to take advantage of AES-NI with this command:
 
 ```
 openssl engine
@@ -113,6 +115,8 @@ The output should read:
 
 Source: https://kazoo.ga/quick-benchmark-cbc-vs-gcm/
 
-Also, 128 bit encryption offers a 40% savings on CPU time over 256 bit encryption.
+#### Encryption Level
+
+128 bit encryption offers a 40% savings on CPU time over 256 bit encryption.
 
 Source: https://crypto.stackexchange.com/a/23
