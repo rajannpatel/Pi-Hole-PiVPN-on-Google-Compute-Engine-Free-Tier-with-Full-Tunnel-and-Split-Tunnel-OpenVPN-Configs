@@ -10,10 +10,10 @@ Run your own privacy-first ad blocking service within the [Free Usage Tier](http
 
 The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encrypted connection to the cloud.
 
-| Tunnel Type | Data Usage | Security | Ad Blocking |
-| -- | -- | -- | -- |
-| full | 10% more data usage | 100% encryption | yes
-| split | least data usage | DNS encryption only | yes
+| Tunnel Type | Data Usage | Server CPU Load | Security | Ad Blocking |
+| -- | -- | -- | -- | -- |
+| full | 10% more data usage | High | 100% encryption | yes
+| split | least data usage | Very Low, Negligible | DNS encryption only | yes
 
 ---
 
