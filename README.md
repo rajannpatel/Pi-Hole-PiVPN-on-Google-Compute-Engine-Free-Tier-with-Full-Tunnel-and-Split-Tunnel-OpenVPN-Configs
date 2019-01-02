@@ -349,7 +349,7 @@ E-mail these files to yourself, upload in Google Drive, or use whatever secure m
 
 ## "OpenVPN for Android" on Android for Split Tunnel VPN
 
-open source software
+This is open source software.
 
 <a href="https://f-droid.org/repository/browse/?fdid=de.blinkt.openvpn" target="_blank">
 <img src="./images/logos/f-droid.svg" alt="Get it on F-Droid" height="80"></a>
@@ -390,7 +390,7 @@ Click the back button a couple times until you are at the **Profiles** Tab again
 
 ## "OpenVPN Connect" on Android for Full Tunnel VPN
 
-open source software
+This is open source software.
 
 <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn" target="_blank">
 <img src="./images/logos/google-play.svg" alt="Get it on Google Play" height="60"></a>
@@ -415,7 +415,7 @@ Click **Save** at the top right.
 
 ## "OpenVPN Connect" on iOS for Full & Split Tunnel VPN
 
-open source software
+This is open source software.
 
 <a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981?mt=8" target="_blank">
 <img src="./images/logos/app-store.svg" alt="Get it on the App Store" height="60"></a>
@@ -441,7 +441,7 @@ Click the Hamburger Menu at the top left and click **Settings**
 
 ## Viscosity VPN on macOS or Windows
 
-commercial software
+This is commercial software.
 
 - [Getting Started with Viscosity on macOS](https://www.sparklabs.com/support/kb/article/getting-started-with-viscosity-mac/)
 - [Getting Started with Viscosity on Windows](https://www.sparklabs.com/support/kb/article/getting-started-with-viscosity-windows/)
@@ -452,7 +452,7 @@ Import the Split Tunnel **.ovpn** files once Viscosity VPN is installed and runn
 
 ## "OpenVPN GUI" on Windows
 
-open source software
+This is open source software.
 
 - [Download the OpenVPN Windows Installer](https://openvpn.net/community-downloads/)
 - [Getting Started with OpenVPN GUI on Windows](https://openvpn.net/vpn-server-resources/installation-guide-for-openvpn-connect-client-on-windows/)
@@ -463,7 +463,7 @@ Import the Split Tunnel **.ovpn** files once the OpenVPN GUI is installed and ru
 
 ## Tunnelblick on macOS
 
-open source software
+This is open source software.
 
 You can install Tunnelblick with [Homebrew](https://brew.sh/):
 
