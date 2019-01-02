@@ -45,7 +45,7 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 - Expand **Management, Security, disks, networking, sole tenancy** and click the **Network** tab. Click the Pencil icon under **Network Interfaces**. <br><img src="./images/screenshots/10.png" width="238">
 - The External IP Address should not be Ephemeral. Choose **Create IP Address** to Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
 - You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. Make note of your External IP (it will be different from the screenshot below).<br><img src="./images/screenshots/15.png" width="369">
-- Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**. <br><img src="./images/screenshots/firewall.png" width="222"> <br>Click **Create Firewall Rule** at the top center of the page. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click the **Create** button. You can disable the `default-allow-rdp` rule which Google set up with a default action of Allow, but because our server does not run any service on Port 3389 it is harmless to leave this rule alone. Do not disable the **default-allow-ssh** firewall rule, or you will not be able to use the browser-based SSH from within the Google Cloud Console.
+- Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**. <br><img src="./images/screenshots/firewall.png" width="222"> <br>Click **Create Firewall Rule** at the top center of the page. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click the **Create** button. You can disable the `default-allow-rdp` rule which Google set up with a default action of Allow, but because our server does not run any service on Port 3389 it is harmless to leave this rule alone. Do not disable the **default-allow-ssh** firewall rule, or you will disable the browser-based SSH from within the Google Cloud Console.
 
 <img src="./images/logos/debian.svg" width="48" align="left">
 
@@ -531,6 +531,20 @@ Other Firewall rules you can safely disable:
 Firewall rules that are inconvenient to disable:
 
 - **default-allow-ssh** should really only be open to Google's private network, alas they leave it open to the whole world by default. Nobody can successfully brute force their way into your server on Port 22, because it's not secured with passwords. It is secured with keys. If you disable this rule, you will not be able to use the browser based SSH interface in the Google Cloud Console until you re-enable this rule.
+
+<img src="./images/logos/cloudconsole.svg" width="48" align="left">
+
+# Cloud Console Mobile App
+
+<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole" target="_blank">
+<img src="./images/logos/google-play.svg" alt="Get it on Google Play" height="60"></a>
+<a href="https://itunes.apple.com/us/app/google-cloud-console/id1005120814?mt=8#iTunes" target="_blank">
+<img src="./images/logos/app-store.svg" alt="Get it on the App Store" height="60"></a>
+
+Install the "Cloud Console" app on your Android or iOS device.
+
+Manage and monitor Google Cloud Platform services from your Android or iOS device.
+
 
 # Contributions Welcome
 
