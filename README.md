@@ -470,4 +470,8 @@ https://pi-hole.net/pages-to-test-ad-blocking-performance/
 
 # Contributions Welcome
 
-If there is something that can be done better, or if this documentation can be improved in any way, please submit a Pull Request with your fixes or edits. Discussions regarding [Issues](https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs/issues) are welcome as well.
+If there is something that can be done better, or if this documentation can be improved in any way, please submit a Pull Request with your fixes or edits.
+
+Contributors should be aware of [REASONS.md](./REASONS.md), which explain the factors behind choices made throughout this guide.
+
+Please review the [Issues](https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs/issues) if you are in a position to help others, or participate in improving this project.
