@@ -455,7 +455,7 @@ Import the Split Tunnel **.ovpn** files once the OpenVPN GUI is installed and ru
 
 ## Tunnelblick for macOS (open source software)
 
-You can install Tunnelblick with Homebrew:
+You can install Tunnelblick with [Homebrew](https://brew.sh/):
 
 ```
 brew cask install tunnelblick
