@@ -264,7 +264,8 @@ pivpn add nopass
 
 Give your client profile a name. I like to use an alphanumeric string composed of the user's first name, and their device's make and model (no spaces and no special characters).
 
-*NOTE*: make a new client profile for every device. DO NOT share a client profile between two different devices.
+> ## NOTE
+> Make a new client profile for every device. DO NOT share a client profile between two different devices.
 
 This command will output a success message which looks like this:
 
