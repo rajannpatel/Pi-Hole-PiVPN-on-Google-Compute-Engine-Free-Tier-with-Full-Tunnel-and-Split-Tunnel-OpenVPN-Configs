@@ -1,4 +1,4 @@
-# Full Tunnel & Split Tunnel VPN connections on Android/iOS devices and computers to an OpenVPN enabled Ad-blocking Pi-Hole Server running on Google Cloud's Always Free Usage Tier
+# Full Tunnel & Split Tunnel VPN connections on Android/iOS devices & computers to an OpenVPN Pi-Hole Ad-blocking Server running over an Anycast Edge Network under Google Cloud's Always Free Usage Tier
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
