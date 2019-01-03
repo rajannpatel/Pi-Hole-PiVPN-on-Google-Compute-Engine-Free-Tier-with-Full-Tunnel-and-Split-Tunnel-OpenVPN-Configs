@@ -1,8 +1,8 @@
-# Set up Adblocking over Full Tunnel and Split Tunnel OpenVPN Configurations on Android, iOS, macOS, and Windows with Pi-Hole & PiVPN, using Google Compute Engine's Free Tier
+# Set up Adblocking over Pi-Hole and Full Tunnel & Split Tunnel VPN connections on Android, iOS, macOS, & Windows with PiVPN, using Google Cloud's Always Free Usage Tier
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
-**The goal of this guide is to enable you to safely and privately use the Internet on your phones, tablets, and computers with a VPN, shielding you from intrusive advertisements, and blocking your ISP, mobile carrier, public WiFi hotspot provider, and apps/websites from gaining insight into your usage activity.**
+**The goal of this guide is to enable you to safely and privately use the Internet on your phones, tablets, and computers with OpenVPN, shielding you from intrusive advertisements, and blocking your ISP, mobile carrier, public WiFi hotspot provider, and apps/websites from gaining insight into your usage activity.**
 
 <img src="./images/upfront-cost.svg" width="90" align="right">
 
