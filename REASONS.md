@@ -14,6 +14,8 @@ Google Cloud is not targeted towards consumers. It is targeted towards businesse
 
 You can see more about how Google Cloud handles security, transparency, privacy, and compliance here: https://cloud.google.com/security/
 
+Running a VPN service on Google's Cloud is a vastly superior option over trusting an unknown 3rd party VPN provider with your data.
+
 ## Cost
 
 You get a lot for nothing. A free server running on 1 shared vCPU with 0.6GB of RAM, a cloud based firewall, and a spiffy app and website to monitor everything is nothing very special. Many providers offer this.
