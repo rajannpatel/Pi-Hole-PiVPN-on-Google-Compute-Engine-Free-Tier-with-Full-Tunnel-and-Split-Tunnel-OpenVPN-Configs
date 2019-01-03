@@ -1,19 +1,21 @@
-# Pi-Hole and PiVPN on Google Compute Engine Free Tier with Full Tunnel and Split Tunnel OpenVPN Configurations
+# Set up Adblocking over Full Tunnel and Split Tunnel OpenVPN Configurations on Android, iOS, macOS, and Windows with Pi-Hole & PiVPN, using Google Compute Engine's Free Tier
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
-The goal of this guide is to enable you to safely and privately use the Internet on your phone without intrusive advertisements, and blocking your ISP, mobile carrier, or public Wi-Fi hotspot provider from gaining insight into your usage activity.
+**The goal of this guide is to enable you to safely and privately use the Internet on your phones, tablets, and computers with a VPN, shielding you from intrusive advertisements, and blocking your ISP, mobile carrier, public WiFi hotspot provider, and apps/websites from gaining insight into your usage activity.**
 
 <img src="./images/upfront-cost.svg" width="90" align="right">
 
 Run your own privacy-first ad blocking service within the [Free Usage Tier](https://cloud.google.com/free/) on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android & iOS devices, and computers.
 
-The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encrypted connection to the cloud.
+The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encrypted connection to the cloud. A Full Tunnel VPN can help bypass misconfigured proxies on enterprise WiFi networks, and can protect you from Man-In-The-Middle SSL attacks.
 
 | Tunnel Type | Data Usage | Server CPU Load | Security | Ad Blocking |
 | -- | -- | -- | -- | -- |
-| full | 10% more data usage | High | 100% encryption | yes
+| full | 10% more data usage | Moderate | 100% encryption | yes
 | split | least data usage | Very Low, Negligible | DNS encryption only | yes
+
+The technical merits of major choices in this guide are outlined in [REASONS.md](./REASONS.md).
 
 ---
 
@@ -69,6 +71,8 @@ apt-get update && apt-get upgrade -y
 
 # Pi-Hole Installation
 
+Pi-Hole is a DNS based adblocker.
+
 Ensure you have elevated root privileges by running this command in the bash shell:
 
 ```
@@ -102,6 +106,8 @@ pihole -a -p
 <img src="./images/logos/pivpn.png" width="48" align="left">
 
 # PiVPN Installation
+
+PiVPN is an OpenVPN setup and configuration tool.
 
 Ensure you have elevated root privileges by running this command in the bash shell:
 
