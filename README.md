@@ -1,4 +1,4 @@
-# Set up Adblocking over Pi-Hole and Full Tunnel & Split Tunnel VPN connections on Android, iOS, macOS, & Windows with PiVPN, using Google Cloud's Always Free Usage Tier
+# Set up Adblocking (through Pi-Hole) with Full Tunnel & Split Tunnel OpenVPN (through PiVPN) connections on iOS & Android phones and tablets, and macOS and Windows computers, using Google Cloud's Always Free Usage Tier
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
