@@ -1,5 +1,5 @@
 # Set up a Pi-Hole Ad Blocking VPN Server on Google Cloud's Always Free Usage Tier
-## Configure Full Tunnel or Split Tunnel OpenVPN connections from your Android, iOS, macOS, & Windows devices to your own static Anycast IP on Google's Premium Network
+## Configure Full Tunnel or Split Tunnel OpenVPN connections from your Android, iOS, macOS, & Windows devices to your own static Anycast IP
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
