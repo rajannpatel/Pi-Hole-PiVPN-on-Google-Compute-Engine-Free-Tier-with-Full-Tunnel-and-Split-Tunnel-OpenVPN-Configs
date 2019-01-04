@@ -1,4 +1,4 @@
-# Android/iOS/macOS/Windows Full Tunnel & Split Tunnel VPN connections to an Ad-blocking Server running on Google Cloud's Anycast Edge Network for free
+# Run a Pi-Hole Ad-blocking Server through Google Cloud's Always Free Usage Tier, and connect Android/iOS/macOS/Windows via a Full Tunnel or Split Tunnel VPN to an Anycast IP on Google's Premium Network
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
