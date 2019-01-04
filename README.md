@@ -1,15 +1,15 @@
-# Run a Pi-Hole Ad-blocking Server through Google Cloud's Always Free Usage Tier
+# Set up a Pi-Hole Ad Blocking Server on Google Cloud's Always Free Usage Tier
 ## Configure Full Tunnel or Split Tunnel VPN connections from your Android, iOS, macOS, & Windows devices to an Anycast IP on Google's Premium Network
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
-**The goal of this guide is to enable you to safely and privately use the Internet on your phones, tablets, and computers with a self-run VPN in the cloud, shielding you from intrusive advertisements, and blocking your ISP, mobile carrier, public WiFi hotspot provider, and apps/websites from gaining insight into your usage activity.**
+The goal of this guide is to enable you to safely and privately use the Internet on your phones, tablets, and computers with a self-run VPN in the cloud, shielding you from intrusive advertisements, and blocking your ISP, mobile carrier, public WiFi hotspot provider, and apps/websites from gaining insight into your usage activity.
 
 <img src="./images/upfront-cost.svg" width="90" align="right">
 
-Run your own privacy-first ad blocking service within the [Free Usage Tier](https://cloud.google.com/free/) on Google Cloud. This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android & iOS devices, and computers.
+Run your own privacy-first ad blocking service within the **[Free Usage Tier](https://cloud.google.com/free/)** on Google Cloud. **This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android & iOS devices, and computers.**
 
-The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encrypted connection to the cloud. A Full Tunnel VPN can help bypass misconfigured proxies on enterprise WiFi networks, and can protect you from Man-In-The-Middle SSL attacks.
+The benefit of a Split Tunnel VPN is that you can still interact with devices on your Local Network (such as Chromecast) and still have DNS based ad-blocking over an encrypted connection to the cloud. A Full Tunnel VPN can help bypass misconfigured proxies on corporate WiFi networks, and can protect you from Man-In-The-Middle SSL attacks.
 
 | Tunnel Type | Data Usage | Server CPU Load | Security | Ad Blocking |
 | -- | -- | -- | -- | -- |
