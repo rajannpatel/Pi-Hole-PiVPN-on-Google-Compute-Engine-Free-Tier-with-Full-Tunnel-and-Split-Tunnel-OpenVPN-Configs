@@ -1,4 +1,4 @@
-# Run a Pi-Hole Ad-blocking Server through Google Cloud's Always Free Usage Tier, and connect Android/iOS/macOS/Windows via a Full Tunnel or Split Tunnel VPN to an Anycast IP on Google's Premium Network
+# Run a Pi-Hole Ad-blocking Server through Google Cloud's Always Free Usage Tier, and connect Android, iOS, macOS, & Windows devices through a Full Tunnel or Split Tunnel VPN to an Anycast IP on Google's Premium Network
 
 <img src="./images/data-privacy-risk.svg" width="125" align="right">
 
