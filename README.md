@@ -15,8 +15,8 @@ A Full Tunnel VPN can help bypass misconfigured proxies on corporate WiFi networ
 
 | Tunnel Type | Data Usage | Server CPU Load | Security | Ad Blocking |
 | -- | -- | -- | -- | -- |
-| full | 10% more data usage | Moderate | 100% encryption | yes
-| split | least data usage | Very Low, Negligible | DNS encryption only | yes
+| full | 10% more data usage | moderate | 100% encryption | yes
+| split | least data usage | very low | dns encryption only | yes
 
 The technical merits of major choices in this guide are outlined in [REASONS.md](./REASONS.md).
 
