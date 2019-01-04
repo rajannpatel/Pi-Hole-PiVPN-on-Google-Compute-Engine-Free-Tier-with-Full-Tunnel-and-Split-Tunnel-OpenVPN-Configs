@@ -9,9 +9,10 @@ The goal of this guide is to enable you to safely and privately use the Internet
 
 Run your own privacy-first ad blocking service within the **[Free Usage Tier](https://cloud.google.com/free/)** on Google Cloud. **This guide gets you set up with a Google Cloud account, and walks you through setting up a full tunnel (all traffic) or split tunnel (DNS traffic only) VPN connection on your Android & iOS devices, and computers.**
 
-A Split Tunnel VPN allows you to interact with devices on your Local Network (such as a Chromecast or Roku) and still provide DNS based ad-blocking over an encrypted connection to the cloud.
+Both Full Tunnel and Split Tunnel VPN connections provide DNS based ad-blocking over an encrypted connection to the cloud. The differences are:
 
-A Full Tunnel VPN can help bypass misconfigured proxies on corporate WiFi networks, and protects you from Man-In-The-Middle SSL proxies.
+- A Split Tunnel VPN allows you to interact with devices on your Local Network (such as a Chromecast or Roku).
+- A Full Tunnel VPN can help bypass misconfigured proxies on corporate WiFi networks, and protects you from Man-In-The-Middle SSL proxies.
 
 | Tunnel Type | Data Usage | Server CPU Load | Security | Ad Blocking |
 | -- | -- | -- | -- | -- |
