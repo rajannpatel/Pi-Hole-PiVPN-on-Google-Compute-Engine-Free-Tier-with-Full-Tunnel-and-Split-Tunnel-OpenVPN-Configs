@@ -55,7 +55,7 @@ Choosing a DNS server with the lowest latency is the simplest way to address con
 
 #### Use Google Public DNS
 
-Google's Public DNS has the lowest latency to your Pi-Hole, because it resolves completely within Google's internal private Premium Tier network. It does not make sense to choose any other DNS provider from a performance standpoint.
+Google's Public DNS has the lowest latency to your Pi-Hole, because it resolves completely within Google's internal private Premium Tier network. A round trip ping to Google's Public DNS from within Google's Cloud is 0.16ms, whereas a provider such as Cloudflare with direct peering to Google's network has a ping of 16ms.
 
 <img src="./images/logos/faq-cpu.svg" height="36" align="left">
 
