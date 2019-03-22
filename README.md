@@ -344,7 +344,12 @@ Below `cipher AES-128-GCM` add this line:
 > redirect-gateway def1
 > ```
 
-[Issue # 9](https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs/issues/9) outlines a known problem with Full Tunnel VPN connections over Port 443.
+Add the correct routing (second line) in **/etc/iptables/rules.v4**
+
+```
+-A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+-A POSTROUTING -s 10.9.0.0/24 -o eth0 -j MASQUERADE
+```
 
 ## Make these .ovpn files available on your phone or tablet
 
