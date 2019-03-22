@@ -384,7 +384,7 @@ When the "OpenVPN for Android" opens you are in the **Profiles** Tab. You will h
   - Under the **Authentication/Encryption** Tab
     - The **Encryption Cipher** should be `AES-128-GCM`
   - Under the **Allowed Apps** Tab
-    - the **Drive**, **Duo**, **Gmail**, **Google Play Store**, **Phone**, **Phone and Messaging Storage** and **Phone Services** apps should have a checkmark.
+    - the **Carrier Services**, **Drive**, **Duo**, **Gmail**, **Google Play Store**, **Phone**, **Phone and Messaging Storage** and **Phone Services** apps should have a checkmark.
 
 - Click the back button a couple times until you are at the **Profiles** Tab again.
 
@@ -553,6 +553,26 @@ Other Firewall rules you can safely disable:
 Firewall rules that are inconvenient to disable:
 
 - **default-allow-ssh** should really only be open to Google's private network, alas they leave it open to the whole world by default. Nobody can successfully brute force their way into your server on Port 22, because it's not secured with passwords. It is secured with keys. If you disable this rule, you will not be able to use the browser based SSH interface in the Google Cloud Console until you re-enable this rule.
+
+
+# Configure automated Pi-Hole updates and scheduled reboots
+
+PiVpn enables automated security updates of your Pi-Hole, but it won't restart the VM if the update requires it.  Restarting the VM would require SSH'ing into it and restarting it if required.  To remove that step, let's use a daily cron job to check to see if a restart is required and restart the VM as necessary.
+
+To do that, let's add a new file to `/etc/cron.daily/` called `zz-restart-if-required` using the following command `sudo nano /etc/cron.daily/zz-restart-if-required`.  In nano, add the following lines of code which check to see if the reboot-required token file is present, restarting the VM if so:
+
+    #!/bin/sh
+    if [ -f /var/run/reboot-required ]; then
+      /sbin/shutdown -r now
+    fi
+
+Files stored in `/etc/cron.daily/` will only run if the permissions are configured to allow that, so we need to change the permissions to allow that file to run.  To do that, execute `sudo chmod 755 /etc/cron.daily/zz-restart-if-required`.
+
+Similarly, Pi-Hole gets updated from time to time.  Let's automate installing those updates as well.  To do that, let's create a file using `sudo nano /etc/cron.daily/update-pi-hole` and add in this one line of code `pihole -up`.  We need to change its permissions so it is executible `sudo chmod 755 /etc/cron.daily/update-pi-hole`.
+
+If you're curious when they will run, [Stack Exchange has a great Q&A for you](https://serverfault.com/questions/135906/when-does-cron-daily-run).
+
+
 
 <img src="./images/logos/cloudconsole.svg" width="48" align="left">
 
