@@ -568,7 +568,7 @@ To do that, let's add a new file to `/etc/cron.daily/` called `zz-restart-if-req
 
 Files stored in `/etc/cron.daily/` will only run if the permissions are configured to allow that, so we need to change the permissions to allow that file to run.  To do that, execute `sudo chmod 755 /etc/cron.daily/zz-restart-if-required`.
 
-Similarly, Pi-Hole gets updated from time to time.  Let's automate installing those updates as well.  To do that, let's create a file using `sudo nano /etc/cron.daily/update-pi-hole` and add in this one line of code `pihole -u`.  We need to change its permissions so it is executible `sudo chmod 755 /etc/cron.daily/update-pi-hole`.
+Similarly, Pi-Hole gets updated from time to time.  Let's automate installing those updates as well.  To do that, let's create a file using `sudo nano /etc/cron.daily/update-pi-hole` and add in this one line of code `pihole -up`.  We need to change its permissions so it is executible `sudo chmod 755 /etc/cron.daily/update-pi-hole`.
 
 If you're curious when they will run, [Stack Exchange has a great Q&A for you](https://serverfault.com/questions/135906/when-does-cron-daily-run).
 
