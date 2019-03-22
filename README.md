@@ -380,8 +380,15 @@ When the "OpenVPN for Android" opens you are in the **Profiles** Tab. You will h
 - Click the pencil icon next to the VPN profile you imported. <br><img src="./images/screenshots/pencil.png" width="360">
   - Click the **Server List** Tab.
     - **Connect Timeout** should be **60** for UDP VPN Profiles and **120** for TCP VPN Profiles.
+  - Click the **IP AND DNS** Tab.
+    - **No local binding** should be enabled
+    - **Override DNS Settings by Server** should be enabled
+      - **searchDomain** should be empty
+      - **DNS Server** should be **10.0.8.1**
+      - **Backup DNS Server** should be empty
   - Click the **Routing** Tab.
-    - **Bypass VPN for local networks** should NOT have a checkmark. Uncheck it.
+    - **Bypass VPN for local networks** should be enabled.
+    - **Block IPv6 (or IPv4) if not used by the VPN** should be enabled.
     - Click **Excluded Networks** under IPv4 and add this:
       ```
       10.0.0.8/8 172.16.0.0/12 192.168.0.0/16
@@ -397,6 +404,7 @@ Click the **Settings** Tab:
 - **OpenVPN 3 Core** should have a checkmark
 - click **Default VPN** and choose the VPN you have imported
 - **Connect on Boot** should have a checkmark
+- **Pause VPN connection after screen off** should be enabled if you wish to save your battery and reduce data usage, and only want to block things while you're actively using your phone.
 
 Click the back button a couple times until you are at the **Profiles** Tab again.
 - Clicking the name of the VPN profile you imported should trigger a connection.
