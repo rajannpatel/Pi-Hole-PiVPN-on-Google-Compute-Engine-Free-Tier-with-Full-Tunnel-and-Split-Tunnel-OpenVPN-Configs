@@ -404,7 +404,7 @@ When the "OpenVPN for Android" opens you are in the **Profiles** Tab. You will h
   - Under the **Authentication/Encryption** Tab
     - The **Encryption Cipher** should be `AES-128-GCM`
   - Under the **Allowed Apps** Tab
-    - the **Carrier Services**, **Drive**, **Duo**, **Gmail**, **Google Play Store**, **Messages**, **Phone**, **Phone and Messaging Storage** and **Phone Services** apps should have a checkmark.
+    - the **Carrier Services**, **Cloud Print**, **Drive**, **Duo**, **Gmail**, **Google Play Services**, **Google Play Store**, **Messages**, **Phone**, **Phone and Messaging Storage** and **Phone Services** apps should have a checkmark.
 
 - Click the back button a couple times until you are at the **Profiles** Tab again.
 
