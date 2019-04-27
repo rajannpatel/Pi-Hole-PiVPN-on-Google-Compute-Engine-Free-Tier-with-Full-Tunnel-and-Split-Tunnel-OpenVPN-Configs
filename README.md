@@ -392,7 +392,7 @@ When the "OpenVPN for Android" opens you are in the **Profiles** Tab. You will h
     - **No local binding** should be enabled
     - **Override DNS Settings by Server** should be enabled
       - **searchDomain** should be empty
-      - **DNS Server** should be **10.0.8.1**
+      - **DNS Server** should be **10.8.0.1**
       - **Backup DNS Server** should be empty
   - Click the **Routing** Tab.
     - **Bypass VPN for local networks** should be enabled.
