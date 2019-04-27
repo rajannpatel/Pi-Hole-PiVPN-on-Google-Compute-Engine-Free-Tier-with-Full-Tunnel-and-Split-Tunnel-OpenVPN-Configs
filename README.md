@@ -208,6 +208,19 @@ To accept incoming OpenVPN connections over TCP on port 443 we need a separate c
 cp server.conf server_tcp443.conf
 ```
 
+Edit **/etc/iptables/rules.v4**. I use **nano** to edit by running this command in the bash shell:
+
+```
+nano /etc/iptables/rules.v4
+```
+
+Add the correct routing rule (the second line)
+
+```
+-A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+-A POSTROUTING -s 10.9.0.0/24 -o eth0 -j MASQUERADE
+```
+
 Edit **server_tcp443.conf**. I use **nano** to edit by running this command in the bash shell:
 
 ```
@@ -343,13 +356,6 @@ Below `cipher AES-128-GCM` add this line:
 > ```
 > redirect-gateway def1
 > ```
-
-Add the correct routing (second line) in **/etc/iptables/rules.v4**
-
-```
--A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
--A POSTROUTING -s 10.9.0.0/24 -o eth0 -j MASQUERADE
-```
 
 ## Make these .ovpn files available on your phone or tablet
 
