@@ -217,9 +217,11 @@ nano /etc/iptables/rules.v4
 Add the correct routing rule (the second line)
 
 ```
--A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
--A POSTROUTING -s 10.9.0.0/24 -o eth0 -j MASQUERADE
+> -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+> -A POSTROUTING -s 10.9.0.0/24 -o eth0 -j MASQUERADE
 ```
+
+Press `CTRL` `O` to bring up the save prompt at the bottom of Nano, press **Enter** to save. Then press `CTRL` `X` to exit
 
 Edit **server_tcp443.conf**. I use **nano** to edit by running this command in the bash shell:
 
