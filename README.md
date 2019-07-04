@@ -508,6 +508,8 @@ If you don't have Homebrew, you can get [alternate installation instructions](ht
 
 Import the Split Tunnel **.ovpn** files once Tunnelblick is installed and running.
 
+<img src="./images/logos/gnome.png" width="48" align="left">
+
 ## gnome-manager on Ubuntu
 
 Enable the option which reads **Use this connection only for resources on its network** in the **IPv4** Tab
