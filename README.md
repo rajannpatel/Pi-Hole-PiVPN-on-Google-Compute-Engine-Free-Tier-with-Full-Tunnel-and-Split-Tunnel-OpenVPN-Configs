@@ -479,6 +479,8 @@ This is commercial software.
 
 Import the Split Tunnel **.ovpn** files once Viscosity VPN is installed and running.
 
+To enable Split Tunnel VPN with Viscosity on Windows, once you import the connection to Viscosity, **Edit Connection** and click the **Networking** Tab. Under the **DNS** *Mode* dropdown, choose `Full DNS (Use VPN DNS for all traffic)`.
+
 <img src="./images/logos/openvpn.svg" width="48" align="left">
 
 ## "OpenVPN GUI" on Windows
