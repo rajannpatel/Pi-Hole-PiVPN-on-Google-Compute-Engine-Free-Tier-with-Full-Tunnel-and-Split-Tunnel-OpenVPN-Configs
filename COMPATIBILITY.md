@@ -1,4 +1,4 @@
-# Supported & Compatible Devices & OSes
+# Supported & Compatible Software Combinations
 
 If you succeed or fail at implementing this OpenVPN solution on your device, please submit a Pull Request to this Repository with an update to the table below.
 
