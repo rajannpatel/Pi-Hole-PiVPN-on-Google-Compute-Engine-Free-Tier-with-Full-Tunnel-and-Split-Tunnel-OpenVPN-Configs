@@ -510,7 +510,9 @@ Import the Split Tunnel **.ovpn** files once Tunnelblick is installed and runnin
 
 <img src="./images/logos/gnome.png" width="48" align="left">
 
-## "gnome-manager" on Ubuntu
+## "gnome-manager" on Ubuntu (and its variants)
+
+This open source software is baked into Ubuntu's OS
 
 Enable the option which reads **Use this connection only for resources on its network** in the **IPv4** Tab
 
