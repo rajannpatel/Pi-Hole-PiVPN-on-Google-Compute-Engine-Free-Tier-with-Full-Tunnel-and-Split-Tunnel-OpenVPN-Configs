@@ -510,7 +510,7 @@ Import the Split Tunnel **.ovpn** files once Tunnelblick is installed and runnin
 
 ## gnome-manager on Ubuntu
 
-Look for an option which reads **Use this connection only for resources on its network** in the **IPv4** Tab
+Enable the option which reads **Use this connection only for resources on its network** in the **IPv4** Tab
 
 # Verify Everything Works
 
