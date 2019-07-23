@@ -535,7 +535,7 @@ Enable the option which reads **Use this connection only for resources on its ne
 - Set **DNS Server1** to 10.8.0.1
 - Scroll to the bottom and click **Apply**
 
-<img src="./images/screenshots/asuswrt-wan-settings.png" width="284" align="left">
+<br><img src="./images/screenshots/asuswrt-wan-settings.png" width="284" align="left"><br>
 
 
 ## Use AsusWRT Firewall to force all DNS traffic to Pi-Hole
@@ -548,7 +548,7 @@ Enable the option which reads **Use this connection only for resources on its ne
   - Destination IP = 10.8.0.1, Port Range = 53, Protocol = TCP
 - Scroll to the bottom and click **Apply**
 
-<img src="./images/screenshots/asuswrt-network-services-filter.png" width="284" align="left">
+<br><img src="./images/screenshots/asuswrt-network-services-filter.png" width="284" align="left"><br>
 
 
 
