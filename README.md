@@ -518,17 +518,18 @@ Enable the option which reads **Use this connection only for resources on its ne
 
 # Split Tunnel VPN on Routers with AsusWRT & AsusWRT-Merlin Firmware
 
-##Activate the OpenVPN Client Profile
-- Go to http://<AsusWRT Router IP>/Advanced_OpenVPNClient_Content.asp
+## Activate the OpenVPN Client Profile
+- Go to http://&lt;AsusWRT Router IP&gt;/Advanced_OpenVPNClient_Content.asp
 - Select an unused client instance (usually Client 1).
 - Beside **Import .ovpn File**, click Browse
 - Browse to your OpenVPN Client Profile (e.g. asuswrt-udp-1194-split-tunnel.ovpn)
 - Click **Upload**
+- Set **Accept DNS Configuration** to STRICT
 - Click the **Service State** toggle to activate the client
 - Scroll to the bottom and click **Apply**
 
 
-##Set Pi-Hole as the DNS provider
+## Set Pi-Hole as the DNS provider
 - Go to http://<AsusWRT Router IP>/Advanced_WAN_Content.asp
 - Under **WAN DNS Setting**, set **Connect to DNS Server automatically** to NO.
 - Set **DNS Server1** to 10.8.0.1
@@ -537,8 +538,8 @@ Enable the option which reads **Use this connection only for resources on its ne
 <img src="./images/screenshots/asuswrt-wan-settings.png" width="284" align="left">
 
 
-##Use AsusWRT Firewall to force all DNS traffic to Pi-Hole
-- Go to http://<AsusWRT Router IP>/Advanced_Firewall_Content.asp
+## Use AsusWRT Firewall to force all DNS traffic to Pi-Hole
+- Go to http://&lt;AsusWRT Router IP&gt;/Advanced_Firewall_Content.asp
 - Set **Enable Network Services Filter** to YES
 - Add the following rules to the **Network Services Filter Table**
   - Port Range = 53, Protocol = UDP
