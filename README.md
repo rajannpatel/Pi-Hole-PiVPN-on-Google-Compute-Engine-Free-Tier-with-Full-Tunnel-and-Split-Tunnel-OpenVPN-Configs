@@ -528,15 +528,11 @@ Enable the option which reads **Use this connection only for resources on its ne
 - Click the **Service State** toggle to activate the client
 - Scroll to the bottom and click **Apply**
 
-
 ## Set Pi-Hole as the DNS provider
 - Go to http://<AsusWRT Router IP>/Advanced_WAN_Content.asp
 - Under **WAN DNS Setting**, set **Connect to DNS Server automatically** to NO.
 - Set **DNS Server1** to 10.8.0.1
-- Scroll to the bottom and click **Apply**
-
-<br><img src="./images/screenshots/asuswrt-wan-settings.png" width="284" align="left"><br>
-
+- Scroll to the bottom and click **Apply**<br><img src="./images/screenshots/asuswrt-wan-settings.png" width="284" align="left">
 
 ## Use AsusWRT Firewall to force all DNS traffic to Pi-Hole
 - Go to http://&lt;AsusWRT Router IP&gt;/Advanced_Firewall_Content.asp
@@ -546,11 +542,7 @@ Enable the option which reads **Use this connection only for resources on its ne
   - Port Range = 53, Protocol = TCP
   - Destination IP = 10.8.0.1, Port Range = 53, Protocol = UDP
   - Destination IP = 10.8.0.1, Port Range = 53, Protocol = TCP
-- Scroll to the bottom and click **Apply**
-
-<br><img src="./images/screenshots/asuswrt-network-services-filter.png" width="284" align="left"><br>
-
-
+- Scroll to the bottom and click **Apply** <br><img src="./images/screenshots/asuswrt-network-services-filter.png" width="284" align="left">
 
 # Verify Everything Works
 
