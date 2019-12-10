@@ -91,7 +91,11 @@ curl -sSL https://install.pi-hole.net | bash
 
 You will flow into a series of prompts in a blue screen.
 
-- Choose OK or answer positively for all the prompts until the "Select Protocols" question appears. IPv6 needs to be deselected as shown below: <br><img src="./images/screenshots/16.png" width="281">
+- Choose OK or answer positively for all the prompts until you have to choose an upstream DNS provider. After choosing one;
+
+- Answer "No" to the question about Entering a Custom Domain / Custom Search Domain.
+
+- When the "Select Protocols" question appears. IPv6 needs to be deselected as shown below: <br><img src="./images/screenshots/16.png" width="281">
 
 - Choose OK or answer positively for all the other prompts.
 
