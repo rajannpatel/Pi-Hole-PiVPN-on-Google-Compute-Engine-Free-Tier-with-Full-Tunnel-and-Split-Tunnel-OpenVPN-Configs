@@ -556,6 +556,8 @@ Enable the option which reads **Use this connection only for resources on its ne
 
 ## Test your Full Tunnel VPN
 
+**You do not need to perform this test if you are using a Split Tunnel to access only the DNS over VPN.**
+
 Go here: https://www.google.com/search?q=what+is+my+ip
 
 You will see your IP address displayed very prominently at the top above the label: **Your public IP address**
