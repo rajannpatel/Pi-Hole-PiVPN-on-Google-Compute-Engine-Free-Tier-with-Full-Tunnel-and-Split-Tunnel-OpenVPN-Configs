@@ -23,8 +23,8 @@ The technical merits of major choices in this guide are outlined in [REASONS.md]
 
 ---
 
-<a href="#"><img src="./images/numbers/1.svg" width="28" align="left"> Google Cloud Login and Account Creation</a> <br><br>
-<a href="#"><img src="./images/numbers/2.svg" width="28" align="left"> Compute Engine Virtual Machine Setup</a> <br><br>
+<a href="#google-cloud-login-and-account-creation"><img src="./images/numbers/1.svg" width="28" align="left"> Google Cloud Login and Account Creation</a> <br><br>
+<a href="#compute-engine-virtual-machine-setup"><img src="./images/numbers/2.svg" width="28" align="left"> Compute Engine Virtual Machine Setup</a> <br><br>
 
 
 <img src="./images/logos/cloud.svg" width="48" align="left">
