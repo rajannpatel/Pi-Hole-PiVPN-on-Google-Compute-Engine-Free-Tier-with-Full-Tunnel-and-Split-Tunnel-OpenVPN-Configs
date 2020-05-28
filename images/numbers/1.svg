@@ -1,0 +1,8 @@
+<svg width="400px" height="400px" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <circle cx="200" cy="200" fill="#1f77b4" r="100"></circle>
+    <text fill="white" x="200" y="200" font-size="120" text-anchor="middle" alignment-baseline="central" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace">
+        1
+    </text>
+  </g>
+</svg>
