@@ -1,9 +1,11 @@
-# notice
-## use the wireguard guide instead
+# NOTICE
+## USE THE WIREGUARD GUIDE INSTEAD
 
 https://github.com/rajannpatel/Pi-Hole-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-Wireguard-VPN-Configs
 
-Because Wireguard is available as a native kernel module in Ubuntu 20.04, this guide is going to get less attention from me. I have automated the setup of Pi-Hole and Wireguard VPN Client Profiles, it is much simpler to get started.
+Because Wireguard is available as a native kernel module in Ubuntu 20.04, this guide is going to get less attention from me. I have automated the setup of Pi-Hole and Wireguard VPN Client Profiles, and it is much simpler to get started with Wireguard.
+
+---
 
 # Set up a Pi-Hole Ad Blocking VPN Server with a static Anycast IP on Google Cloud's Always Free Usage Tier
 ## Configure Full Tunnel or Split Tunnel OpenVPN connections from your Android, iOS, Linux, macOS, & Windows devices
