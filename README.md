@@ -1,5 +1,4 @@
-# NOTICE
-## USE THE WIREGUARD GUIDE INSTEAD
+# NOTICE: [USE THE WIREGUARD GUIDE INSTEAD](https://github.com/rajannpatel/Pi-Hole-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-Wireguard-VPN-Configs)
 
 https://github.com/rajannpatel/Pi-Hole-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-Wireguard-VPN-Configs
 
