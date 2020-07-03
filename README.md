@@ -59,8 +59,9 @@ Select the closest **Region**: `us-east1 (South Carolina)`, `us-west1 (Oregon)`,
 Under **Boot Disk** click **Change**, and select **Operating System** `Debian` and **Version** `Debian GNU/Linux 9 (stretch)` with a **Size (GB)** `30` Standard persistent disk.<br><img src="./images/screenshots/9.png" width="232">
 4. Expand **Management, Security, disks, networking, sole tenancy** and click the **Network** tab. Click the Pencil icon under **Network Interfaces**. <br><img src="./images/screenshots/10.png" width="238">
 5. The External IP Address should not be Ephemeral. Choose **Create IP Address** to Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
-6. You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. Make note of your External IP (it will be different from the screenshot below).<br><img src="./images/screenshots/15.png" width="369">
-7. Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**. <br><img src="./images/screenshots/firewall.png" width="222"> <br>Click **Create Firewall Rule** at the top center of the page. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click the **Create** button. You can disable the `default-allow-rdp` rule which Google set up with a default action of Allow, but because our server does not run any service on Port 3389 it is harmless to leave this rule alone. Do not disable the **default-allow-ssh** firewall rule, or you will disable the browser-based SSH from within the Google Cloud Console.
+6. Click **Create**
+7. You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. Make note of your External IP (it will be different from the screenshot below).<br><img src="./images/screenshots/15.png" width="369">
+8. Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**. <br><img src="./images/screenshots/firewall.png" width="222"> <br>Click **Create Firewall Rule** at the top center of the page. The name of your rule should be `allow-openvpn`, change the **Targets** dropdown to **All instances in the network**. The **Source IP Ranges** should be `0.0.0.0/0`. The **udp** checkbox should be selected, and the port number next to it should be changed from `all` to `1194`. Then click the **Create** button. You can disable the `default-allow-rdp` rule which Google set up with a default action of Allow, but because our server does not run any service on Port 3389 it is harmless to leave this rule alone. Do not disable the **default-allow-ssh** firewall rule, or you will disable the browser-based SSH from within the Google Cloud Console.
 
 <img src="./images/logos/debian.svg" width="48" align="left">
 
@@ -142,9 +143,9 @@ Install PiVPN by running this command in the bash shell:
 curl -L https://install.pivpn.io | bash
 ```
 
-You will flow into a series of prompts in a blue screen. All of the default values are appropriate.
+You will flow into a series of prompts in a blue screen. All of the default values are usually appropriate.
 
-- Choose OK or answer positively for all the prompts until you have to choose an upstream DNS provider. The default answer is Google. Choose **Custom** and set an IP Address of **10.8.0.1** <br><img src="./images/screenshots/custom-dns.png" width="284"><br><img src="./images/screenshots/custom-dns-ip.png" width="284">
+- Choose OK or answer positively for all the prompts until you have to choose a VPN protocol. Your choices are Wireguard (default) and OpenVPN. Considering you have decided to follow an OpenVPN guide, you will choose OpenVPN here. 
 
 The default answer to reboot is **No** at the end of the installer. It is fine to say **No**, we have a few more things to edit while we're logged in as root.
 
