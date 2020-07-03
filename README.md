@@ -56,7 +56,7 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 2. Customize the instance: <br><img src="./images/screenshots/8.png" width="216">
 3. Change **Name** to `pihole`<br>
 Select the closest **Region**: `us-east1 (South Carolina)`, `us-west1 (Oregon)`, or `us-central1 (Iowa)` for the Free Tier<br>
-Under **Boot Disk** click **Change**, and select **Operating System** `Debian` and **Version** `Debian GNU/Linux 9 (stretch)` with a **Size (GB)** `30` Standard persistent disk. <img src="./images/screenshots/9.png" width="232">
+Under **Boot Disk** click **Change**, and select **Operating System** `Debian` and **Version** `Debian GNU/Linux 9 (stretch)` with a **Size (GB)** `30` Standard persistent disk.<br><img src="./images/screenshots/9.png" width="232">
 4. Expand **Management, Security, disks, networking, sole tenancy** and click the **Network** tab. Click the Pencil icon under **Network Interfaces**. <br><img src="./images/screenshots/10.png" width="238">
 5. The External IP Address should not be Ephemeral. Choose **Create IP Address** to Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
 6. You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. Make note of your External IP (it will be different from the screenshot below).<br><img src="./images/screenshots/15.png" width="369">
