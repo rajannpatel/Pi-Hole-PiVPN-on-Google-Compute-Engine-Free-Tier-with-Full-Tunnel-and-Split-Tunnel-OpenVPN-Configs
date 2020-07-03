@@ -599,10 +599,11 @@ Once you are done testing, only use the Google IPv4 Upstream DNS Servers if you 
 
 ## Test the Ad-blocking
 
-A quick test page to verify if your ad blocking is working: https://blockads.fivefilters.org/?pihole
+The majority of in-app advertising should be eliminated, on your mobile devices.
 
-The Pi-Hole project also maintains a list of excellent advertising-littered pages that you can test:
-https://pi-hole.net/pages-to-test-ad-blocking-performance/
+A quick test page to verify if your ad blocking is working: https://ads-blocker.com/testing
+
+Five Filters had a great page, which appears to have stopped working as of July 2, 2020: https://blockads.fivefilters.org/
 
 <img src="./images/logos/firewall.svg" width="48" align="left">
 
