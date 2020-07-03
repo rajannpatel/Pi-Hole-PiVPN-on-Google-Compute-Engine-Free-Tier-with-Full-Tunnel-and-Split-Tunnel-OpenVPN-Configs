@@ -54,8 +54,9 @@ Go to https://cloud.google.com and click **Console** at the top right if you hav
 
 1. Create a Virtual Machine instance on Compute Engine: <br><img src="./images/screenshots/8.png" width="216">
 2. Customize the instance: <br><img src="./images/screenshots/8.png" width="216">
-3. Name your Virtual Machine **pi-hole**. <br>Your Region selection should be any US region only (excluding Northern Virginia [us-east4]). I have used **us-east1** and the **us-east1-b** zone because it is closest to me. <br>Choose a **micro** Machine Type in the dropdown. <br>Change the **Boot Disk** to be **30GB** if you plan on keeping your DNS lookup records for any reason, otherwise the default **10GB** disk allocation is adequate. <br>**Allow HTTP traffic** in the Firewall (add a checkmark).
-<br>**Allow HTTPS traffic** in the Firewall (add a checkmark). <br><img src="./images/screenshots/9.png" width="232">
+3. Change **Name** to `pihole`<br>
+Select the closest **Region**: `us-east1 (South Carolina)`, `us-west1 (Oregon)`, or `us-central1 (Iowa)` for the Free Tier<br>
+Under **Boot Disk** click **Change**, and select **Operating System** `Debian` and **Version** `Debian GNU/Linux 9 (stretch)` with a **Size (GB)** `30` Standard persistent disk. <img src="./images/screenshots/9.png" width="232">
 4. Expand **Management, Security, disks, networking, sole tenancy** and click the **Network** tab. Click the Pencil icon under **Network Interfaces**. <br><img src="./images/screenshots/10.png" width="238">
 5. The External IP Address should not be Ephemeral. Choose **Create IP Address** to Reserve a New Static IP Address <br><img src="./images/screenshots/13.png" width="230"> <br><img src="./images/screenshots/14.png" width="395">
 6. You can log into your Virtual Machine via SSH in a Browser by clicking the SSH button. Make note of your External IP (it will be different from the screenshot below).<br><img src="./images/screenshots/15.png" width="369">
@@ -113,9 +114,11 @@ Set a strong password that you will remember for the Web Interface
 pihole -a -p
 ```
 
-- Log into the web interface using the External IP that you noted down earlier at<br> `http://your-external-ip/admin/settings.php?tab=dns`
+- Set your Pi-Hole's **Interface Listening Behavior** to **local** with this command:
 
-- Click **Settings**, and navigate to **DNS**. <br>Set your **Interface Listening Behavior** to **Listen on All Interfaces** on this page: <br><img src="./images/screenshots/18.png" width="237">
+```
+pihole -a -i local
+```
 
 - Click the **Save** Button at the bottom of the page.
 
@@ -124,6 +127,8 @@ pihole -a -p
 # PiVPN Installation
 
 PiVPN is an OpenVPN setup and configuration tool.
+
+You cannot view the Pi-Hole web interface until you set up a VPN tunnel. After completing the PiVPN installation you will be able to access your Pi-Hole web interface using http://10.8.0.1 if you are using a UDP profile (desirable), or http://10.9.0.1 if you are using the TCP profile (less desirable).
 
 Ensure you have elevated root privileges by running this command in the bash shell:
 
@@ -609,22 +614,16 @@ Five Filters had a great page, which appears to have stopped working as of July 
 
 # Firewall
 
-You may not be comfortable leaving the Pi-Hole web interface accessible on a Public IP
-
-If you do not wish for the Pi-Hole web interface to be accessible publicly, disable Port 80 in your Google Cloud Firewall.
+If you do not wish to expose unused Ports in the firewall, review your Google Cloud Firewall rules:
 
 1. Log into Google Cloud Console: https://console.cloud.google.com/
 2. Ensure your Project is selected in the blue bar at the top (next to the words "Google Cloud Console); by default it should be
 3. Click the Hamburger Menu at the top left, click **VPC Network** and click **Firewall Rules**
-4. Click **default-allow-http** in the table
+4. Click **default-allow-rdp** in the table
 5. Click **Edit** at the top of the page
 6. Click **Disable Rule** above the "Save" button to reveal a radio button group
 7. Select **Disabled**
 8. Click the **Save** button
-
-To access your Pi-Hole web interface once you do this, you will have to connect via VPN, and then go to http://10.8.0.1 if you are using a UDP profile (desirable), or http://10.9.0.1 if you are using the TCP profile (less desirable).
-
-Other Firewall rules you can safely disable:
 
 - **default-allow-rdp** is not necessary, because your Pi-Hole is not running on a Windows server and there is no service running on Port 3389
 
