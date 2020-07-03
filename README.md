@@ -147,6 +147,8 @@ You will flow into a series of prompts in a blue screen. All of the default valu
 
 - Choose OK or answer positively for all the prompts until you have to choose a VPN protocol. Your choices are Wireguard (default) and OpenVPN. Considering you have decided to follow an OpenVPN guide, you will choose OpenVPN here. 
 
+- When asked to choose an upstream DNS provider, the default answer is Google. Choose **Custom** and set an IP Address of **10.8.0.1** <br><img src="./images/screenshots/custom-dns.png" width="284"><br><img src="./images/screenshots/custom-dns-ip.png" width="284">
+
 The default answer to reboot is **No** at the end of the installer. It is fine to say **No**, we have a few more things to edit while we're logged in as root.
 
 <img src="./images/logos/openvpn.svg" width="48" align="left">
