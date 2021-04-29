@@ -28,8 +28,6 @@ The real juicy stuff is in the network connectivity you get for no cost: a stati
 
 ### Network
 
-#### Anycast IPv4 Address
-
 This significantly outperforms other public cloud offerings.
 
 With the Premium Tier Network, inbound traffic from your tablet/phone/computer to your Pi-Hole in Google Cloud goes over Google’s private, high performance network at the POP closest to you. Google delivers outbound traffic returning from Pi-Hole in Google Cloud to your tablet/phone/computer on Google’s network, and exits at the POP closest to you. *You can be anywhere in the world.*
