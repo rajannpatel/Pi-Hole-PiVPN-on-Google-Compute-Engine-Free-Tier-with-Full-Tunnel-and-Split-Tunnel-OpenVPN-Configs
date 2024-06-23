@@ -1,8 +1,11 @@
-# USE THIS WIREGUARD GUIDE INSTEAD: [Full Tunnel or Split Tunnel IPv6 + IPv4 Wireguard VPN connections to an ad blocking Pi-Hole server, from your Android, iOS, Chrome OS, Linux, macOS, & Windows devices](https://github.com/rajannpatel/Pi-Hole-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-Wireguard-VPN-Configs)
+# DEPRECATION NOTICE
+## USE THE WIREGUARD HOW-TO GUIDE INSTEAD
 
-https://github.com/rajannpatel/Pi-Hole-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-Wireguard-VPN-Configs
+[Wireguard VPN connection to a Pi-Hole ad blocking DNS server, from your Android, iOS, Chrome OS, Linux, macOS, & Windows devices](https://github.com/rajannpatel/Pi-Hole-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-Wireguard-VPN-Configs)
 
-Because Wireguard is available as a native kernel module in Ubuntu 20.04, this guide is going to get less attention from me. I have automated the setup of Pi-Hole and Wireguard VPN Client Profiles, and it is much simpler to get started with Wireguard.
+**GO HERE FOR AN ACTIVELY MAINTAINED SOLUTION:** https://github.com/rajannpatel/Pi-Hole-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-Wireguard-VPN-Configs
+
+The below steps are retained here for historical purposes, but this project is not being actively maintained.
 
 ---
 
